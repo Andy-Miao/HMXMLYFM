@@ -15,6 +15,14 @@
 		AD6130D6228538020091C020 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6130D4228538020091C020 /* LaunchScreen.storyboard */; };
 		AD6130E1228538020091C020 /* HMXMLYFMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6130E0228538020091C020 /* HMXMLYFMTests.swift */; };
 		AD6130EC228538020091C020 /* HMXMLYFMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6130EB228538020091C020 /* HMXMLYFMUITests.swift */; };
+		AD67DA4B228BD1E2009CF91D /* HM_BasisTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67DA4A228BD1E2009CF91D /* HM_BasisTabBarItem.swift */; };
+		AD67DA4D228BDEF3009CF91D /* HM_BasisNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67DA4C228BDEF3009CF91D /* HM_BasisNavigationController.swift */; };
+		AD67DA5C228BE123009CF91D /* HM_Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67DA5B228BE123009CF91D /* HM_Header.swift */; };
+		AD67DA64228C0202009CF91D /* WRNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67DA5E228C0202009CF91D /* WRNavigationBar.swift */; };
+		AD67DA65228C0202009CF91D /* WRCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67DA5F228C0202009CF91D /* WRCustomNavigationBar.swift */; };
+		AD67DA66228C0202009CF91D /* WRProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67DA61228C0202009CF91D /* WRProxy.swift */; };
+		AD67DA67228C0202009CF91D /* WRCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67DA62228C0202009CF91D /* WRCycleScrollView.swift */; };
+		AD67DA68228C0202009CF91D /* WRCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67DA63228C0202009CF91D /* WRCycleCell.swift */; };
 		ADCE5C9E228AD5EF00A1410D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCE5C9D228AD5EF00A1410D /* MainTabBarController.swift */; };
 		ADCE5CA7228ADB3A00A1410D /* HM_BasisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCE5CA6228ADB3A00A1410D /* HM_BasisViewController.swift */; };
 		ADCE5CAB228ADB7C00A1410D /* HM_MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCE5CAA228ADB7C00A1410D /* HM_MineViewController.swift */; };
@@ -67,6 +75,14 @@
 		AD6130E7228538020091C020 /* HMXMLYFMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HMXMLYFMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6130EB228538020091C020 /* HMXMLYFMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMXMLYFMUITests.swift; sourceTree = "<group>"; };
 		AD6130ED228538020091C020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD67DA4A228BD1E2009CF91D /* HM_BasisTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_BasisTabBarItem.swift; sourceTree = "<group>"; };
+		AD67DA4C228BDEF3009CF91D /* HM_BasisNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_BasisNavigationController.swift; sourceTree = "<group>"; };
+		AD67DA5B228BE123009CF91D /* HM_Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_Header.swift; sourceTree = "<group>"; };
+		AD67DA5E228C0202009CF91D /* WRNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRNavigationBar.swift; sourceTree = "<group>"; };
+		AD67DA5F228C0202009CF91D /* WRCustomNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCustomNavigationBar.swift; sourceTree = "<group>"; };
+		AD67DA61228C0202009CF91D /* WRProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRProxy.swift; sourceTree = "<group>"; };
+		AD67DA62228C0202009CF91D /* WRCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleScrollView.swift; sourceTree = "<group>"; };
+		AD67DA63228C0202009CF91D /* WRCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleCell.swift; sourceTree = "<group>"; };
 		ADCE5C9D228AD5EF00A1410D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		ADCE5CA6228ADB3A00A1410D /* HM_BasisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_BasisViewController.swift; sourceTree = "<group>"; };
 		ADCE5CAA228ADB7C00A1410D /* HM_MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_MineViewController.swift; sourceTree = "<group>"; };
@@ -192,12 +208,41 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		AD67DA4E228BDF89009CF91D /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				AD67DA5D228C0201009CF91D /* WRNavigationBar */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		AD67DA5D228C0201009CF91D /* WRNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				AD67DA5E228C0202009CF91D /* WRNavigationBar.swift */,
+				AD67DA5F228C0202009CF91D /* WRCustomNavigationBar.swift */,
+				AD67DA60228C0202009CF91D /* WRCycleScrollView */,
+			);
+			path = WRNavigationBar;
+			sourceTree = "<group>";
+		};
+		AD67DA60228C0202009CF91D /* WRCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				AD67DA61228C0202009CF91D /* WRProxy.swift */,
+				AD67DA62228C0202009CF91D /* WRCycleScrollView.swift */,
+				AD67DA63228C0202009CF91D /* WRCycleCell.swift */,
+			);
+			path = WRCycleScrollView;
+			sourceTree = "<group>";
+		};
 		ADCE5C9C228AD5A200A1410D /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				ADCE5CBD228AE1E700A1410D /* TabBarItem */,
 				ADCE5C9D228AD5EF00A1410D /* MainTabBarController.swift */,
 				ADCE5CA6228ADB3A00A1410D /* HM_BasisViewController.swift */,
+				AD67DA4C228BDEF3009CF91D /* HM_BasisNavigationController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -245,6 +290,7 @@
 		ADCE5CB6228AE01B00A1410D /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				AD67DA4E228BDF89009CF91D /* lib */,
 				ADCE5CBA228AE06900A1410D /* Cotegories */,
 				ADCE5CB9228AE04D00A1410D /* Config */,
 			);
@@ -255,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				ADCE5CB7228AE02500A1410D /* SYC_Tools.swift */,
+				AD67DA5B228BE123009CF91D /* HM_Header.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -272,6 +319,7 @@
 			children = (
 				ADCE5CB4228ADF7200A1410D /* HM_BasisContentView.swift */,
 				ADCE5CBE228AE21700A1410D /* HM_BounceContentView.swift */,
+				AD67DA4A228BD1E2009CF91D /* HM_BasisTabBarItem.swift */,
 			);
 			path = TabBarItem;
 			sourceTree = "<group>";
@@ -439,12 +487,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HMXMLYFM/Pods-HMXMLYFM-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 			);
@@ -516,16 +566,24 @@
 			files = (
 				ADCE5CBC228AE06F00A1410D /* String+SYC.swift in Sources */,
 				ADCE5C9E228AD5EF00A1410D /* MainTabBarController.swift in Sources */,
+				AD67DA4D228BDEF3009CF91D /* HM_BasisNavigationController.swift in Sources */,
+				AD67DA66228C0202009CF91D /* WRProxy.swift in Sources */,
 				AD6130CC228538020091C020 /* AppDelegate.swift in Sources */,
 				ADCE5CB3228ADCCE00A1410D /* HM_ListenViewController.swift in Sources */,
 				ADCE5CB8228AE02500A1410D /* SYC_Tools.swift in Sources */,
 				ADCE5CB1228ADCBE00A1410D /* HM_HomeViewController.swift in Sources */,
 				ADCE5CAB228ADB7C00A1410D /* HM_MineViewController.swift in Sources */,
+				AD67DA68228C0202009CF91D /* WRCycleCell.swift in Sources */,
 				ADCE5CBF228AE21700A1410D /* HM_BounceContentView.swift in Sources */,
+				AD67DA65228C0202009CF91D /* WRCustomNavigationBar.swift in Sources */,
 				ADCE5CB5228ADF7200A1410D /* HM_BasisContentView.swift in Sources */,
 				ADCE5CAF228ADCAF00A1410D /* HM_PlayViewController.swift in Sources */,
+				AD67DA4B228BD1E2009CF91D /* HM_BasisTabBarItem.swift in Sources */,
 				ADCE5CAD228ADC9B00A1410D /* HM_FindViewController.swift in Sources */,
 				ADCE5CA7228ADB3A00A1410D /* HM_BasisViewController.swift in Sources */,
+				AD67DA64228C0202009CF91D /* WRNavigationBar.swift in Sources */,
+				AD67DA5C228BE123009CF91D /* HM_Header.swift in Sources */,
+				AD67DA67228C0202009CF91D /* WRCycleScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +696,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -692,6 +751,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -710,7 +770,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hm.www.HMXMLYFM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -729,7 +789,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hm.www.HMXMLYFM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

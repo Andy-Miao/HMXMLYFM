@@ -44,7 +44,7 @@ class MainTabBarController: ESTabBarController {
                 warning.configureContent(title: "Warning", body: "暂是没有此功能", iconText: iconText)
                 warning.button?.isHidden = true
                 var warningConfig = SwiftMessages.defaultConfig
-                warningConfig.presentationContext = .window(windowLevel:UIWindow.Level.statusBar)
+                warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
                 SwiftMessages.show(config: warningConfig, view: warning)
             })
         }
@@ -58,10 +58,26 @@ class MainTabBarController: ESTabBarController {
         let find = HM_FindViewController()
         let mine = HM_MineViewController()
         
+        home.tabBarItem = ESTabBarItem.init(HM_BasisTabBarItem(), title: "首页", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
+        listen.tabBarItem = ESTabBarItem.init(HM_BasisTabBarItem(), title: "我听", image: UIImage(named: "find"), selectedImage: UIImage(named: "find_1"))
+        paly.tabBarItem = ESTabBarItem.init(HM_BasisTabBarItem(), title: nil, image: UIImage(named: "tab_play"), selectedImage: UIImage(named: "tab_play"))
+        find.tabBarItem = ESTabBarItem.init(HM_BasisTabBarItem(), title: "发现", image: UIImage(named: "favor"), selectedImage: UIImage(named: "favor_1"))
+        mine.tabBarItem = ESTabBarItem.init(HM_BasisTabBarItem(), title: "我的", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))
         
         
+        let homeNav = HM_BasisNavigationController(rootViewController: home)
+        let listenNav = HM_BasisNavigationController(rootViewController: listen)
+        let palyNav = HM_BasisNavigationController(rootViewController: paly)
+        let findNav = HM_BasisNavigationController(rootViewController: find)
+        let mineNav = HM_BasisNavigationController(rootViewController: mine)
         
+        home.title = "首页"
+        listen.title = "我听"
+        paly.title = "播放"
+        find.title = "发现"
+        mine.title = "我的"
         
+        self.viewControllers = [homeNav, listenNav, palyNav, findNav, mineNav]
     }
     /*
     // MARK: - Navigation

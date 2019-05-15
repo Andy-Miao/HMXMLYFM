@@ -13,10 +13,10 @@ class HM_BasisContentView: ESTabBarItemContentView {
 
     override init(frame : CGRect) {
         super.init(frame: frame)
-        textColor = UIColor(white: 175.0 / 255.0, alpha: 1.0)
+        textColor = UIColor(white: 175.0/255.0, alpha: 1.0)
         highlightTextColor = SYC_Tools.RGBColor(r: 254, g: 73, b: 42)
         
-        iconColor = UIColor(white: 175.0 / 255.0, alpha: 1.0)
+        iconColor = UIColor(white: 175.0/255.0, alpha: 1.0)
         highlightIconColor = SYC_Tools.RGBColor(r: 254, g: 73, b: 42)
     }
     

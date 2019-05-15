@@ -32,7 +32,7 @@ class HM_BounceContentView: HM_BasisContentView {
         let impliesAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
         impliesAnimation.values = [1.0, 1.4, 0.9, 1.15, 0.95,1.02, 1.0]
         impliesAnimation.duration = 2.0 //持续时间
-        impliesAnimation.calculationMode = CAAnimationCalculationMode.cubic
+        impliesAnimation.calculationMode = kCAAnimationCubic
         imageView.layer.add(impliesAnimation, forKey: nil)
     }
 
