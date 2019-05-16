@@ -15,7 +15,8 @@ target 'HMXMLYFM' do
     pod 'SwiftMessages','~> 4.1.4'
     
     pod 'Kingfisher'
-
+    # 分页
+    pod 'DNSPageView', '~> 1.0.1'
 
 
   target 'HMXMLYFMTests' do

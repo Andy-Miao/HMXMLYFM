@@ -23,6 +23,11 @@
 		AD67DA66228C0202009CF91D /* WRProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67DA61228C0202009CF91D /* WRProxy.swift */; };
 		AD67DA67228C0202009CF91D /* WRCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67DA62228C0202009CF91D /* WRCycleScrollView.swift */; };
 		AD67DA68228C0202009CF91D /* WRCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67DA63228C0202009CF91D /* WRCycleCell.swift */; };
+		AD6C3B60228D3B0D009BDEC3 /* HM_RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B5F228D3B0D009BDEC3 /* HM_RecommendViewController.swift */; };
+		AD6C3B63228D3B36009BDEC3 /* HM_ClassifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B62228D3B36009BDEC3 /* HM_ClassifyViewController.swift */; };
+		AD6C3B66228D3CDF009BDEC3 /* HM_VipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B65228D3CDF009BDEC3 /* HM_VipViewController.swift */; };
+		AD6C3B69228D3CFD009BDEC3 /* HM_LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B68228D3CFD009BDEC3 /* HM_LiveViewController.swift */; };
+		AD6C3B6C228D3D16009BDEC3 /* HM_BroadcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B6B228D3D16009BDEC3 /* HM_BroadcastViewController.swift */; };
 		ADCE5C9E228AD5EF00A1410D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCE5C9D228AD5EF00A1410D /* MainTabBarController.swift */; };
 		ADCE5CA7228ADB3A00A1410D /* HM_BasisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCE5CA6228ADB3A00A1410D /* HM_BasisViewController.swift */; };
 		ADCE5CAB228ADB7C00A1410D /* HM_MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCE5CAA228ADB7C00A1410D /* HM_MineViewController.swift */; };
@@ -83,6 +88,11 @@
 		AD67DA61228C0202009CF91D /* WRProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRProxy.swift; sourceTree = "<group>"; };
 		AD67DA62228C0202009CF91D /* WRCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleScrollView.swift; sourceTree = "<group>"; };
 		AD67DA63228C0202009CF91D /* WRCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleCell.swift; sourceTree = "<group>"; };
+		AD6C3B5F228D3B0D009BDEC3 /* HM_RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HM_RecommendViewController.swift; sourceTree = "<group>"; };
+		AD6C3B62228D3B36009BDEC3 /* HM_ClassifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HM_ClassifyViewController.swift; sourceTree = "<group>"; };
+		AD6C3B65228D3CDF009BDEC3 /* HM_VipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HM_VipViewController.swift; sourceTree = "<group>"; };
+		AD6C3B68228D3CFD009BDEC3 /* HM_LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HM_LiveViewController.swift; sourceTree = "<group>"; };
+		AD6C3B6B228D3D16009BDEC3 /* HM_BroadcastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HM_BroadcastViewController.swift; sourceTree = "<group>"; };
 		ADCE5C9D228AD5EF00A1410D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		ADCE5CA6228ADB3A00A1410D /* HM_BasisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_BasisViewController.swift; sourceTree = "<group>"; };
 		ADCE5CAA228ADB7C00A1410D /* HM_MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_MineViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +246,46 @@
 			path = WRCycleScrollView;
 			sourceTree = "<group>";
 		};
+		AD6C3B5E228D3B0D009BDEC3 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				AD6C3B5F228D3B0D009BDEC3 /* HM_RecommendViewController.swift */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		AD6C3B61228D3B36009BDEC3 /* Classify */ = {
+			isa = PBXGroup;
+			children = (
+				AD6C3B62228D3B36009BDEC3 /* HM_ClassifyViewController.swift */,
+			);
+			path = Classify;
+			sourceTree = "<group>";
+		};
+		AD6C3B64228D3CDF009BDEC3 /* VIP */ = {
+			isa = PBXGroup;
+			children = (
+				AD6C3B65228D3CDF009BDEC3 /* HM_VipViewController.swift */,
+			);
+			path = VIP;
+			sourceTree = "<group>";
+		};
+		AD6C3B67228D3CFD009BDEC3 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				AD6C3B68228D3CFD009BDEC3 /* HM_LiveViewController.swift */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		AD6C3B6A228D3D16009BDEC3 /* Broadcast */ = {
+			isa = PBXGroup;
+			children = (
+				AD6C3B6B228D3D16009BDEC3 /* HM_BroadcastViewController.swift */,
+			);
+			path = Broadcast;
+			sourceTree = "<group>";
+		};
 		ADCE5C9C228AD5A200A1410D /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +300,11 @@
 		ADCE5CA1228ADA3100A1410D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AD6C3B6A228D3D16009BDEC3 /* Broadcast */,
+				AD6C3B67228D3CFD009BDEC3 /* Live */,
+				AD6C3B64228D3CDF009BDEC3 /* VIP */,
+				AD6C3B61228D3B36009BDEC3 /* Classify */,
+				AD6C3B5E228D3B0D009BDEC3 /* Recommend */,
 				ADCE5CB0228ADCBE00A1410D /* HM_HomeViewController.swift */,
 			);
 			path = Home;
@@ -486,6 +541,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HMXMLYFM/Pods-HMXMLYFM-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DNSPageView/DNSPageView.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -493,6 +549,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DNSPageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -564,12 +621,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD6C3B60228D3B0D009BDEC3 /* HM_RecommendViewController.swift in Sources */,
 				ADCE5CBC228AE06F00A1410D /* String+SYC.swift in Sources */,
 				ADCE5C9E228AD5EF00A1410D /* MainTabBarController.swift in Sources */,
 				AD67DA4D228BDEF3009CF91D /* HM_BasisNavigationController.swift in Sources */,
 				AD67DA66228C0202009CF91D /* WRProxy.swift in Sources */,
 				AD6130CC228538020091C020 /* AppDelegate.swift in Sources */,
 				ADCE5CB3228ADCCE00A1410D /* HM_ListenViewController.swift in Sources */,
+				AD6C3B66228D3CDF009BDEC3 /* HM_VipViewController.swift in Sources */,
 				ADCE5CB8228AE02500A1410D /* SYC_Tools.swift in Sources */,
 				ADCE5CB1228ADCBE00A1410D /* HM_HomeViewController.swift in Sources */,
 				ADCE5CAB228ADB7C00A1410D /* HM_MineViewController.swift in Sources */,
@@ -579,8 +638,11 @@
 				ADCE5CB5228ADF7200A1410D /* HM_BasisContentView.swift in Sources */,
 				ADCE5CAF228ADCAF00A1410D /* HM_PlayViewController.swift in Sources */,
 				AD67DA4B228BD1E2009CF91D /* HM_BasisTabBarItem.swift in Sources */,
+				AD6C3B69228D3CFD009BDEC3 /* HM_LiveViewController.swift in Sources */,
+				AD6C3B6C228D3D16009BDEC3 /* HM_BroadcastViewController.swift in Sources */,
 				ADCE5CAD228ADC9B00A1410D /* HM_FindViewController.swift in Sources */,
 				ADCE5CA7228ADB3A00A1410D /* HM_BasisViewController.swift in Sources */,
+				AD6C3B63228D3B36009BDEC3 /* HM_ClassifyViewController.swift in Sources */,
 				AD67DA64228C0202009CF91D /* WRNavigationBar.swift in Sources */,
 				AD67DA5C228BE123009CF91D /* HM_Header.swift in Sources */,
 				AD67DA67228C0202009CF91D /* WRCycleScrollView.swift in Sources */,

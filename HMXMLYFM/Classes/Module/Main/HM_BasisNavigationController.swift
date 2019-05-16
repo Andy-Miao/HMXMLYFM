@@ -13,7 +13,7 @@ class HM_BasisNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+       let vc = HM_HomeViewController()
     }
     
     func setupNavBarAppearence() {
