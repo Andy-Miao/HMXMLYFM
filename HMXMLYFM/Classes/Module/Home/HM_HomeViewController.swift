@@ -14,7 +14,6 @@ class HM_HomeViewController: HM_BasisViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
         setupView()
     }
     
@@ -28,6 +27,7 @@ class HM_HomeViewController: HM_BasisViewController {
         pageStyle.isShowBottomLine = true
         pageStyle.titleSelectedColor = .black
         pageStyle.titleColor = .gray
+        pageStyle.bottomLineColor = BTN_COLOR
         pageStyle.bottomLineHeight = 2
         
         let titles = ["推荐","分类","VIP","直播","广播"]

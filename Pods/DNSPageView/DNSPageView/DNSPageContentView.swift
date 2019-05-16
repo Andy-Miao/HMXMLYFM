@@ -3,7 +3,7 @@
 //  DNSPageView
 //
 //  Created by Daniels on 2018/2/24.
-//  Copyright © 2018年 Daniels. All rights reserved.
+//  Copyright © 2018 Daniels. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,8 +27,8 @@
 import UIKit
 
 public protocol DNSPageContentViewDelegate: class {
-    func contentView(_ contentView: DNSPageContentView, inIndex: Int)
-    func contentView(_ contentView: DNSPageContentView, sourceIndex: Int, targetIndex: Int, progress: CGFloat)
+    func contentView(_ contentView: DNSPageContentView, didEndScrollAt index: Int)
+    func contentView(_ contentView: DNSPageContentView, scrollingWith sourceIndex: Int, targetIndex: Int, progress: CGFloat)
 }
 
 
@@ -37,14 +37,14 @@ open class DNSPageContentView: UIView {
     
     public weak var delegate: DNSPageContentViewDelegate?
     
-    public weak var reloader: DNSPageReloadable?
+    public weak var eventHandler: DNSPageEventHandleable?
     
     public var style: DNSPageStyle
     
     public var childViewControllers : [UIViewController]
     
     /// 初始化后，默认显示的页数
-    public var startIndex: Int
+    public var currentIndex: Int
     
     private var startOffsetX: CGFloat = 0
     
@@ -71,10 +71,10 @@ open class DNSPageContentView: UIView {
     }()
     
     
-    public init(frame: CGRect, style: DNSPageStyle, childViewControllers: [UIViewController], startIndex: Int) {
+    public init(frame: CGRect, style: DNSPageStyle, childViewControllers: [UIViewController], currentIndex: Int) {
         self.childViewControllers = childViewControllers
         self.style = style
-        self.startIndex = startIndex
+        self.currentIndex = currentIndex
         super.init(frame: frame)
         setupUI()
     }
@@ -82,7 +82,7 @@ open class DNSPageContentView: UIView {
     required public init?(coder aDecoder: NSCoder) {
         self.childViewControllers = [UIViewController]()
         self.style = DNSPageStyle()
-        self.startIndex = 0
+        self.currentIndex = 0
         super.init(coder: aDecoder)
         
     }
@@ -93,7 +93,7 @@ open class DNSPageContentView: UIView {
         collectionView.frame = bounds
         let layout = collectionView.collectionViewLayout as! DNSPageCollectionViewFlowLayout
         layout.itemSize = bounds.size
-        layout.offset = CGFloat(startIndex) * bounds.size.width
+        layout.offset = CGFloat(currentIndex) * bounds.size.width
     }
 }
 
@@ -122,7 +122,7 @@ extension DNSPageContentView: UICollectionViewDataSource {
         }
         let childViewController = childViewControllers[indexPath.item]
 
-        reloader = childViewController as? DNSPageReloadable
+        eventHandler = childViewController as? DNSPageEventHandleable
         childViewController.view.frame = cell.contentView.bounds
         cell.contentView.addSubview(childViewController.view)
         
@@ -158,15 +158,20 @@ extension DNSPageContentView: UICollectionViewDelegate {
     
     
     private func collectionViewDidEndScroll(_ scrollView: UIScrollView) {
-        let inIndex = Int(round(scrollView.contentOffset.x / scrollView.bounds.width))
+        let index = Int(round(scrollView.contentOffset.x / scrollView.bounds.width))
         
-        let childViewController = childViewControllers[inIndex]
+        delegate?.contentView(self, didEndScrollAt: index)
         
-        reloader = childViewController as? DNSPageReloadable
+        if index != currentIndex {
+            let childViewController = childViewControllers[currentIndex]
+            (childViewController as? DNSPageEventHandleable)?.contentViewDidDisappear?()
+        }
         
-        reloader?.contentViewDidEndScroll?()
+        currentIndex = index
         
-        delegate?.contentView(self, inIndex: inIndex)
+        eventHandler = childViewControllers[currentIndex] as? DNSPageEventHandleable
+        
+        eventHandler?.contentViewDidEndScroll?()
         
     }
 
@@ -183,7 +188,7 @@ extension DNSPageContentView: UICollectionViewDelegate {
         
         
         progress = scrollView.contentOffset.x.truncatingRemainder(dividingBy: scrollView.bounds.width) / scrollView.bounds.width
-        if progress == 0 {
+        if progress == 0 || progress.isNaN {
             return
         }
         
@@ -192,9 +197,7 @@ extension DNSPageContentView: UICollectionViewDelegate {
         if collectionView.contentOffset.x > startOffsetX { // 左滑动
             sourceIndex = index
             targetIndex = index + 1
-            if targetIndex > childViewControllers.count - 1 {
-                return
-            }
+            guard targetIndex < childViewControllers.count else { return }
         } else {
             sourceIndex = index + 1
             targetIndex = index
@@ -208,20 +211,21 @@ extension DNSPageContentView: UICollectionViewDelegate {
             progress = 1
         }
         
-        delegate?.contentView(self, sourceIndex: sourceIndex, targetIndex: targetIndex, progress: progress)
+        delegate?.contentView(self, scrollingWith: sourceIndex, targetIndex: targetIndex, progress: progress)
     }
 }
 
 
 extension DNSPageContentView: DNSPageTitleViewDelegate {
-    public func titleView(_ titleView: DNSPageTitleView, currentIndex: Int) {
+    public func titleView(_ titleView: DNSPageTitleView, didSelectAt index: Int) {
         isForbidDelegate = true
         
-        if currentIndex > childViewControllers.count - 1 {
-            return
-        }
-        let indexPath = IndexPath(item: currentIndex, section: 0)
+        guard currentIndex < childViewControllers.count else { return }
+        
+        currentIndex = index
 
+        let indexPath = IndexPath(item: index, section: 0)
+        
         collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
     }
 }

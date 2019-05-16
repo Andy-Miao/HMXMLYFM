@@ -3,7 +3,7 @@
 //  DNSPageView
 //
 //  Created by Daniels on 2018/2/24.
-//  Copyright © 2018年 Daniels. All rights reserved.
+//  Copyright © 2018 Daniels. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -28,20 +28,24 @@ import UIKit
 
 @objc public protocol DNSPageTitleViewDelegate: class {
     
-    /// pageContentView的刷新代理
-    @objc optional var reloader: DNSPageReloadable? { get }
+    /// DNSPageView的事件回调处理者
+    @objc optional var eventHandler: DNSPageEventHandleable? { get }
     
-    func titleView(_ titleView: DNSPageTitleView, currentIndex: Int)
+    func titleView(_ titleView: DNSPageTitleView, didSelectAt index: Int)
 }
 
-/// 如果contentView中的view需要实现某些刷新的方法，请让对应的childViewController遵守这个协议
-@objc public protocol DNSPageReloadable: class {
+/// DNSPageView的事件回调，如果有需要，请让对应的childViewController遵守这个协议
+@objc public protocol DNSPageEventHandleable: class {
     
-    /// 如果需要双击标题刷新或者作其他处理，请实现这个方法
-    @objc optional func titleViewDidSelectedSameTitle()
+    /// 重复点击pageTitleView后调用
+    @objc optional func titleViewDidSelectSameTitle()
     
-    /// 如果pageContentView滚动到下一页停下来需要刷新或者作其他处理，请实现这个方法
+    /// pageContentView的上一页消失的时候，上一页对应的controller调用
+    @objc optional func contentViewDidDisappear()
+    
+    /// pageContentView滚动停止的时候，当前页对应的controller调用
     @objc optional func contentViewDidEndScroll()
+    
 }
 
 
@@ -125,7 +129,7 @@ open class DNSPageTitleView: UIView {
     /// 通过代码实现点了某个位置的titleView
     ///
     /// - Parameter index: 需要点击的titleView的下标
-    public func selectedTitle(inIndex index: Int) {
+    public func selectedTitle(at index: Int) {
         if index > titles.count || index < 0 {
             print("DNSPageTitleView -- selectedTitle: 数组越界了, index的值超出有效范围");
         }
@@ -133,7 +137,7 @@ open class DNSPageTitleView: UIView {
         clickHandler?(self, index)
 
         if index == currentIndex {
-            delegate?.reloader??.titleViewDidSelectedSameTitle?()
+            delegate?.eventHandler??.titleViewDidSelectSameTitle?()
             return
         }
 
@@ -142,13 +146,14 @@ open class DNSPageTitleView: UIView {
 
         sourceLabel.textColor = style.titleColor
         targetLabel.textColor = style.titleSelectedColor
+        
+        delegate?.eventHandler??.contentViewDidDisappear?()
 
         currentIndex = index
 
+        delegate?.titleView(self, didSelectAt: currentIndex)
+        
         adjustLabelPosition(targetLabel)
-
-        delegate?.titleView(self, currentIndex: currentIndex)
-
 
         if style.isTitleScaleEnabled {
             UIView.animate(withDuration: 0.25, animations: {
@@ -173,8 +178,9 @@ open class DNSPageTitleView: UIView {
             })
         }
 
-        sourceLabel.backgroundColor = nil
+        sourceLabel.backgroundColor = UIColor.clear
         targetLabel.backgroundColor = style.titleViewSelectedColor
+                
     }
     
 }
@@ -199,10 +205,10 @@ extension DNSPageTitleView {
             label.tag = i
             label.text = title
             label.textColor = i == currentIndex ? style.titleSelectedColor : style.titleColor
-            label.backgroundColor = i == currentIndex ? style.titleViewSelectedColor : nil;
+            label.backgroundColor = i == currentIndex ? style.titleViewSelectedColor : UIColor.clear;
             label.textAlignment = .center
             label.font = style.titleFont
-            let tapGes = UITapGestureRecognizer(target: self, action: #selector(titleLabelClick(_:)))
+            let tapGes = UITapGestureRecognizer(target: self, action: #selector(tapedTitleLabel(_:)))
             label.addGestureRecognizer(tapGes)
             label.isUserInteractionEnabled = true
             
@@ -244,7 +250,7 @@ extension DNSPageTitleView {
         let count = titleLabels.count
         for (i, titleLabel) in titleLabels.enumerated() {
             if style.isTitleViewScrollEnabled {
-                width = (titles[i] as NSString).boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: 0), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : titleLabel.font], context: nil).width
+                width = (titles[i] as NSString).boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: 0), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : style.titleFont], context: nil).width
                 x = i == 0 ? style.titleMargin * 0.5 : (titleLabels[i - 1].frame.maxX + style.titleMargin)
             } else {
                 width = bounds.width / CGFloat(count)
@@ -255,7 +261,7 @@ extension DNSPageTitleView {
         }
         
         if style.isTitleScaleEnabled {
-            titleLabels.first?.transform = CGAffineTransform(scaleX: style.titleMaximumScaleFactor, y: style.titleMaximumScaleFactor)
+            titleLabels[currentIndex].transform = CGAffineTransform(scaleX: style.titleMaximumScaleFactor, y: style.titleMaximumScaleFactor)
         }
         
         if style.isTitleViewScrollEnabled {
@@ -265,7 +271,7 @@ extension DNSPageTitleView {
     }
     
     private func setupCoverViewLayout() {
-        guard titleLabels.count - 1 >= currentIndex  else { return }
+        guard currentIndex < titleLabels.count else { return }
         let label = titleLabels[currentIndex]
         var width = label.bounds.width
         let height = style.coverViewHeight
@@ -279,7 +285,7 @@ extension DNSPageTitleView {
     }
     
     private func setupBottomLineLayout() {
-        guard titleLabels.count - 1 >= currentIndex else { return }
+        guard currentIndex < titleLabels.count else { return }
         let label = titleLabels[currentIndex]
         
         bottomLine.frame.origin.x = label.frame.origin.x
@@ -291,16 +297,18 @@ extension DNSPageTitleView {
 
 // MARK: - 监听label的点击
 extension DNSPageTitleView {
-    @objc private func titleLabelClick(_ tapGes : UITapGestureRecognizer) {
-        guard let targetIndex = tapGes.view?.tag else { return }
-        selectedTitle(inIndex: targetIndex)
+    @objc private func tapedTitleLabel(_ tapGes : UITapGestureRecognizer) {
+        guard let index = tapGes.view?.tag else { return }
+        selectedTitle(at: index)
 
     }
 
 
     
     private func adjustLabelPosition(_ targetLabel : UILabel) {
-        guard style.isTitleViewScrollEnabled else { return }
+        guard style.isTitleViewScrollEnabled,
+            scrollView.contentSize.width > scrollView.bounds.width
+            else { return }
         
         var offsetX = targetLabel.center.x - bounds.width * 0.5
         
@@ -319,26 +327,26 @@ extension DNSPageTitleView {
 
 
 extension DNSPageTitleView : DNSPageContentViewDelegate {
-    public func contentView(_ contentView: DNSPageContentView, inIndex: Int) {
+    public func contentView(_ contentView: DNSPageContentView, didEndScrollAt index: Int) {
         
         let sourceLabel = titleLabels[currentIndex]
-        let targetLabel = titleLabels[inIndex]
+        let targetLabel = titleLabels[index]
 
-        sourceLabel.backgroundColor = nil
+        sourceLabel.backgroundColor = UIColor.clear
         targetLabel.backgroundColor = style.titleViewSelectedColor
         
-        currentIndex = inIndex
+        currentIndex = index
                 
         adjustLabelPosition(targetLabel)
         
         fixUI(targetLabel)
     }
     
-    public func contentView(_ contentView: DNSPageContentView, sourceIndex: Int, targetIndex: Int, progress: CGFloat) {
-        if sourceIndex > titleLabels.count - 1 || sourceIndex < 0 {
+    public func contentView(_ contentView: DNSPageContentView, scrollingWith sourceIndex: Int, targetIndex: Int, progress: CGFloat) {
+        if sourceIndex >= titleLabels.count || sourceIndex < 0 {
             return
         }
-        if targetIndex > titleLabels.count - 1 || targetIndex < 0 {
+        if targetIndex >= titleLabels.count || targetIndex < 0 {
             return
         }
         let sourceLabel = titleLabels[sourceIndex]

@@ -28,6 +28,16 @@
 		AD6C3B66228D3CDF009BDEC3 /* HM_VipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B65228D3CDF009BDEC3 /* HM_VipViewController.swift */; };
 		AD6C3B69228D3CFD009BDEC3 /* HM_LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B68228D3CFD009BDEC3 /* HM_LiveViewController.swift */; };
 		AD6C3B6C228D3D16009BDEC3 /* HM_BroadcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B6B228D3D16009BDEC3 /* HM_BroadcastViewController.swift */; };
+		AD6C3B6F228D88D2009BDEC3 /* HM_RecommendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B6E228D88D2009BDEC3 /* HM_RecommendHeaderView.swift */; };
+		AD6C3B71228D88F1009BDEC3 /* HM_RecommendFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B70228D88F1009BDEC3 /* HM_RecommendFooterView.swift */; };
+		AD6C3B74228D8ABC009BDEC3 /* URefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B73228D8ABC009BDEC3 /* URefresh.swift */; };
+		AD6C3B77228D8E69009BDEC3 /* HM_RecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B76228D8E69009BDEC3 /* HM_RecommendModel.swift */; };
+		AD6C3B7A228D91D5009BDEC3 /* HM_RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B79228D91D5009BDEC3 /* HM_RecommendViewModel.swift */; };
+		AD6C3B7D228D9431009BDEC3 /* HM_RecommendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B7C228D9431009BDEC3 /* HM_RecommendAPI.swift */; };
+		AD6C3B7F228D9C8E009BDEC3 /* HM_RecommendForYouCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B7E228D9C8E009BDEC3 /* HM_RecommendForYouCell.swift */; };
+		AD6C3B81228DA08D009BDEC3 /* HM_RecommendHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B80228DA08D009BDEC3 /* HM_RecommendHeaderCell.swift */; };
+		AD6C3B83228DA121009BDEC3 /* HM_RecommendGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B82228DA121009BDEC3 /* HM_RecommendGridCell.swift */; };
+		AD6C3B85228DA14D009BDEC3 /* HM_RecommendNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B84228DA14D009BDEC3 /* HM_RecommendNewsCell.swift */; };
 		ADCE5C9E228AD5EF00A1410D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCE5C9D228AD5EF00A1410D /* MainTabBarController.swift */; };
 		ADCE5CA7228ADB3A00A1410D /* HM_BasisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCE5CA6228ADB3A00A1410D /* HM_BasisViewController.swift */; };
 		ADCE5CAB228ADB7C00A1410D /* HM_MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCE5CAA228ADB7C00A1410D /* HM_MineViewController.swift */; };
@@ -93,6 +103,16 @@
 		AD6C3B65228D3CDF009BDEC3 /* HM_VipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HM_VipViewController.swift; sourceTree = "<group>"; };
 		AD6C3B68228D3CFD009BDEC3 /* HM_LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HM_LiveViewController.swift; sourceTree = "<group>"; };
 		AD6C3B6B228D3D16009BDEC3 /* HM_BroadcastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HM_BroadcastViewController.swift; sourceTree = "<group>"; };
+		AD6C3B6E228D88D2009BDEC3 /* HM_RecommendHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendHeaderView.swift; sourceTree = "<group>"; };
+		AD6C3B70228D88F1009BDEC3 /* HM_RecommendFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendFooterView.swift; sourceTree = "<group>"; };
+		AD6C3B73228D8ABC009BDEC3 /* URefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URefresh.swift; sourceTree = "<group>"; };
+		AD6C3B76228D8E69009BDEC3 /* HM_RecommendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendModel.swift; sourceTree = "<group>"; };
+		AD6C3B79228D91D5009BDEC3 /* HM_RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendViewModel.swift; sourceTree = "<group>"; };
+		AD6C3B7C228D9431009BDEC3 /* HM_RecommendAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendAPI.swift; sourceTree = "<group>"; };
+		AD6C3B7E228D9C8E009BDEC3 /* HM_RecommendForYouCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendForYouCell.swift; sourceTree = "<group>"; };
+		AD6C3B80228DA08D009BDEC3 /* HM_RecommendHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendHeaderCell.swift; sourceTree = "<group>"; };
+		AD6C3B82228DA121009BDEC3 /* HM_RecommendGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendGridCell.swift; sourceTree = "<group>"; };
+		AD6C3B84228DA14D009BDEC3 /* HM_RecommendNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendNewsCell.swift; sourceTree = "<group>"; };
 		ADCE5C9D228AD5EF00A1410D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		ADCE5CA6228ADB3A00A1410D /* HM_BasisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_BasisViewController.swift; sourceTree = "<group>"; };
 		ADCE5CAA228ADB7C00A1410D /* HM_MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_MineViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +241,7 @@
 		AD67DA4E228BDF89009CF91D /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				AD6C3B72228D8ABC009BDEC3 /* Refresh */,
 				AD67DA5D228C0201009CF91D /* WRNavigationBar */,
 			);
 			path = lib;
@@ -249,6 +270,10 @@
 		AD6C3B5E228D3B0D009BDEC3 /* Recommend */ = {
 			isa = PBXGroup;
 			children = (
+				AD6C3B7B228D9415009BDEC3 /* API */,
+				AD6C3B78228D91B5009BDEC3 /* ViewModel */,
+				AD6C3B75228D8CB4009BDEC3 /* Model */,
+				AD6C3B6D228D88B0009BDEC3 /* View */,
 				AD6C3B5F228D3B0D009BDEC3 /* HM_RecommendViewController.swift */,
 			);
 			path = Recommend;
@@ -284,6 +309,51 @@
 				AD6C3B6B228D3D16009BDEC3 /* HM_BroadcastViewController.swift */,
 			);
 			path = Broadcast;
+			sourceTree = "<group>";
+		};
+		AD6C3B6D228D88B0009BDEC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD6C3B6E228D88D2009BDEC3 /* HM_RecommendHeaderView.swift */,
+				AD6C3B70228D88F1009BDEC3 /* HM_RecommendFooterView.swift */,
+				AD6C3B7E228D9C8E009BDEC3 /* HM_RecommendForYouCell.swift */,
+				AD6C3B80228DA08D009BDEC3 /* HM_RecommendHeaderCell.swift */,
+				AD6C3B82228DA121009BDEC3 /* HM_RecommendGridCell.swift */,
+				AD6C3B84228DA14D009BDEC3 /* HM_RecommendNewsCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD6C3B72228D8ABC009BDEC3 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				AD6C3B73228D8ABC009BDEC3 /* URefresh.swift */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
+		AD6C3B75228D8CB4009BDEC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD6C3B76228D8E69009BDEC3 /* HM_RecommendModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD6C3B78228D91B5009BDEC3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AD6C3B79228D91D5009BDEC3 /* HM_RecommendViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD6C3B7B228D9415009BDEC3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AD6C3B7C228D9431009BDEC3 /* HM_RecommendAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		ADCE5C9C228AD5A200A1410D /* Main */ = {
@@ -541,19 +611,33 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HMXMLYFM/Pods-HMXMLYFM-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DNSPageView/DNSPageView.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DNSPageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -622,20 +706,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD6C3B60228D3B0D009BDEC3 /* HM_RecommendViewController.swift in Sources */,
+				AD6C3B74228D8ABC009BDEC3 /* URefresh.swift in Sources */,
 				ADCE5CBC228AE06F00A1410D /* String+SYC.swift in Sources */,
+				AD6C3B81228DA08D009BDEC3 /* HM_RecommendHeaderCell.swift in Sources */,
+				AD6C3B71228D88F1009BDEC3 /* HM_RecommendFooterView.swift in Sources */,
 				ADCE5C9E228AD5EF00A1410D /* MainTabBarController.swift in Sources */,
 				AD67DA4D228BDEF3009CF91D /* HM_BasisNavigationController.swift in Sources */,
 				AD67DA66228C0202009CF91D /* WRProxy.swift in Sources */,
 				AD6130CC228538020091C020 /* AppDelegate.swift in Sources */,
 				ADCE5CB3228ADCCE00A1410D /* HM_ListenViewController.swift in Sources */,
+				AD6C3B7F228D9C8E009BDEC3 /* HM_RecommendForYouCell.swift in Sources */,
 				AD6C3B66228D3CDF009BDEC3 /* HM_VipViewController.swift in Sources */,
 				ADCE5CB8228AE02500A1410D /* SYC_Tools.swift in Sources */,
 				ADCE5CB1228ADCBE00A1410D /* HM_HomeViewController.swift in Sources */,
 				ADCE5CAB228ADB7C00A1410D /* HM_MineViewController.swift in Sources */,
 				AD67DA68228C0202009CF91D /* WRCycleCell.swift in Sources */,
+				AD6C3B7A228D91D5009BDEC3 /* HM_RecommendViewModel.swift in Sources */,
 				ADCE5CBF228AE21700A1410D /* HM_BounceContentView.swift in Sources */,
 				AD67DA65228C0202009CF91D /* WRCustomNavigationBar.swift in Sources */,
 				ADCE5CB5228ADF7200A1410D /* HM_BasisContentView.swift in Sources */,
+				AD6C3B6F228D88D2009BDEC3 /* HM_RecommendHeaderView.swift in Sources */,
+				AD6C3B83228DA121009BDEC3 /* HM_RecommendGridCell.swift in Sources */,
 				ADCE5CAF228ADCAF00A1410D /* HM_PlayViewController.swift in Sources */,
 				AD67DA4B228BD1E2009CF91D /* HM_BasisTabBarItem.swift in Sources */,
 				AD6C3B69228D3CFD009BDEC3 /* HM_LiveViewController.swift in Sources */,
@@ -645,7 +736,10 @@
 				AD6C3B63228D3B36009BDEC3 /* HM_ClassifyViewController.swift in Sources */,
 				AD67DA64228C0202009CF91D /* WRNavigationBar.swift in Sources */,
 				AD67DA5C228BE123009CF91D /* HM_Header.swift in Sources */,
+				AD6C3B7D228D9431009BDEC3 /* HM_RecommendAPI.swift in Sources */,
+				AD6C3B85228DA14D009BDEC3 /* HM_RecommendNewsCell.swift in Sources */,
 				AD67DA67228C0202009CF91D /* WRCycleScrollView.swift in Sources */,
+				AD6C3B77228D8E69009BDEC3 /* HM_RecommendModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
