@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import HandyJSON
+import SwiftMessages
 
 class HM_RecommendViewModel: NSObject {
 
@@ -36,6 +37,21 @@ extension HM_RecommendViewModel {
             if case let .success(response) = result {
                 // 解析
                 let data = try?response.mapJSON()
+                guard (data != nil) else {
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.2, execute: {
+                        let warning = MessageView.viewFromNib(layout: .cardView)
+                        warning.configureDropShadow()
+                        
+                        let iconText = ["🤔", "😳", "🙄", "😶"].sm_random()!
+                        warning.configureContent(title: "", body: "亲，系统出错啦，等等再试好不啦？", iconText: iconText)
+                        warning.button?.isHidden = true
+                        var warningConfig = SwiftMessages.defaultConfig
+                        warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
+                        SwiftMessages.show(config: warningConfig, view: warning)
+                    })
+                    self.updateDataBlock?()
+                    return;
+                }
                 let json = JSON(data!)
                 if let mappedObject = JSONDeserializer<HM_HomeRecommendModel>.deserializeFrom(json: json.description) { // 从字符串转换为对象实例
                     self.homeRecommendModel = mappedObject
@@ -51,6 +67,7 @@ extension HM_RecommendViewModel {
                     if  let squareModel = JSONDeserializer<HM_SquareModel>.deserializeModelArrayFrom(json: json["list"][1]["list"].description) {
                         self.squareListModel = squareModel as?[HM_SquareModel]
                     }
+                    
                     
                     if let topBuzzModel = JSONDeserializer<HM_TopBuzzModel>.deserializeModelArrayFrom(json: json["list"][2]["list"].description) {
                         self.topBuzzListmodel = topBuzzModel as? [HM_TopBuzzModel]

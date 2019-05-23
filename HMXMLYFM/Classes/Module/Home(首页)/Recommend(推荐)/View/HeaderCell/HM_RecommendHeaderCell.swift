@@ -45,8 +45,10 @@ class HM_RecommendHeaderCell: UICollectionViewCell {
         let collectionView = UICollectionView.init(frame:.zero, collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = UIColor.white
+        collectionView.backgroundColor = .white
+        // 九宫格
         collectionView.register(HM_RecommendGridCell.self, forCellWithReuseIdentifier: "HM_RecommendGridCell")
+        // 头条
         collectionView.register(HM_RecommendNewsCell.self, forCellWithReuseIdentifier: "HM_RecommendNewsCell")
         return collectionView
     }()
@@ -64,6 +66,8 @@ class HM_RecommendHeaderCell: UICollectionViewCell {
             make.left.top.right.equalToSuperview()
             make.height.equalTo(150)
         }
+        self.pagerView.itemSize = CGSize.init(width: SCREEN_WIDTH - 60, height: 140)
+        
         // 九宫格
         self.addSubview(self.gridView)
         self.gridView.snp.makeConstraints { (make) in
@@ -71,7 +75,6 @@ class HM_RecommendHeaderCell: UICollectionViewCell {
             make.top.equalTo(self.pagerView.snp.bottom)
             make.height.equalTo(210)
         }
-        self.pagerView.itemSize = CGSize.init(width: SCREEN_WIDTH - 60, height: 140)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -101,7 +104,7 @@ class HM_RecommendHeaderCell: UICollectionViewCell {
         }
     }
 }
-
+// 滚动视图
 extension HM_RecommendHeaderCell:FSPagerViewDelegate,FSPagerViewDataSource{
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         return self.focus?.data?.count ?? 0
@@ -117,6 +120,7 @@ extension HM_RecommendHeaderCell:FSPagerViewDelegate,FSPagerViewDataSource{
         delegate?.recommendHeaderBannerClick(url: url)
     }
 }
+// 九宫格
 extension HM_RecommendHeaderCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
@@ -168,9 +172,10 @@ extension HM_RecommendHeaderCell: UICollectionViewDelegate, UICollectionViewData
         if !url.contains("?") {
             return ""
         }
+        // 字典
         var params = [String: Any]()
         // 截取参数
-        let split = url.split(separator: "?")
+        let split:[Substring] = url.split(separator: "?")
         let string = split[1]
         // 判断参数是单个参数还是多个参数
         if string.contains("&") {

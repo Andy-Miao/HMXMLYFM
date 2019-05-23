@@ -17,7 +17,7 @@ class HM_RecommendForYouCell: UICollectionViewCell {
         collectionView.dataSource = self
         collectionView.backgroundColor = UIColor.white
         collectionView.alwaysBounceVertical = true
-        collectionView.register(HM_RecommendForYouCell.self, forCellWithReuseIdentifier: "HM_RecommendForYouCell")
+        collectionView.register(HM_ForYouCell.self, forCellWithReuseIdentifier: "HM_ForYouCell")
         return collectionView
     }()
     
@@ -50,7 +50,7 @@ extension HM_RecommendForYouCell: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell:HM_RecommendForYouCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HM_RecommendForYouCell", for: indexPath) as! HM_RecommendForYouCell
+        let cell:HM_ForYouCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HM_ForYouCell", for: indexPath) as! HM_ForYouCell
         return cell
     }
     

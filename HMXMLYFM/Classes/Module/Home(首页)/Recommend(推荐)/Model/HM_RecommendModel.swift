@@ -19,6 +19,7 @@ struct HM_HomeRecommendModel: HandyJSON {
 
 // 里层的model
 struct HM_RecommendModel: HandyJSON {
+    var isNewUser:Bool = false
     var bottomHasMore: Bool = false
     var hasMore: Bool = false
     var list: [HM_RecommendListModel]?
