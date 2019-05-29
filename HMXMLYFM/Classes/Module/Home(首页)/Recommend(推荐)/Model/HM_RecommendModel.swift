@@ -273,7 +273,7 @@ struct HM_LiveModel: HandyJSON {
     var status: Int = 0
     var uid: Int = 0
 }
-struct HM_RecommnedAdvertModel: HandyJSON {
+struct HM_RecommendAdvertModel: HandyJSON {
     var shareData: HM_AdvertShareData?
     var isShareFlag: Bool = false
     var thirdStatUrl: String?

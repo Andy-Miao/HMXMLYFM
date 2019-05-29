@@ -1,34 +1,64 @@
 PODS:
+  - Alamofire (4.8.2)
   - DNSPageView (1.0.4)
   - ESTabBarController-swift (2.7)
+  - FSPagerView (0.8.2)
+  - HandyJSON (5.0.0-beta.1)
   - Kingfisher (5.4.0)
+  - MJRefresh (3.2.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Result (4.1.0)
   - SnapKit (5.0.0)
   - SwiftMessages (4.1.4):
     - SwiftMessages/App (= 4.1.4)
   - SwiftMessages/App (4.1.4)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
-  - DNSPageView (~> 1.0.1)
+  - DNSPageView
   - ESTabBarController-swift
+  - FSPagerView
+  - HandyJSON (~> 5.0.0-beta.1)
   - Kingfisher
+  - MJRefresh
+  - Moya
   - SnapKit
   - SwiftMessages (~> 4.1.4)
+  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - DNSPageView
     - ESTabBarController-swift
+    - FSPagerView
+    - HandyJSON
     - Kingfisher
+    - MJRefresh
+    - Moya
+    - Result
     - SnapKit
     - SwiftMessages
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   DNSPageView: 28b2b5a9fb65cdc222d45dc2ce6247cd3f9365b5
   ESTabBarController-swift: 4fb52ad03d94d0717ef97bc9eb09a5abfdded0a2
+  FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
+  HandyJSON: 582477127ab3ab65bd2e471815f1a7b846856978
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 6e589d636fda9ad4a25d31a830c5ae3013bc1cff
+PODFILE CHECKSUM: fd8634f66d6c41a4b90bcb6192cbcf9dbaa2d140
 
 COCOAPODS: 1.5.3

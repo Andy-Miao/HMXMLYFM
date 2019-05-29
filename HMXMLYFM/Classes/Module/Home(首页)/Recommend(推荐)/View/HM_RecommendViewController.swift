@@ -7,20 +7,32 @@
 //
 
 import UIKit
+import SwiftyJSON
+import HandyJSON
+import SwiftMessages
 
 class HM_RecommendViewController: HM_BasisViewController {
+    
+    
+    private var recommendAdvertList : [HM_RecommendAdvertModel]?
 
-    private let HM_RecommendHeaderViewID = "HM_RecommendHeaderView"
-    private let HM_RecommendFooterViewID = "HM_RecommendFooterView"
+    private let HM_RecommendHeaderViewID        = "HM_RecommendHeaderView"
+    private let HM_RecommendFooterViewID        = "HM_RecommendFooterView"
     // 注册不同的cell
-    private let HM_RecommendHeaderCellID     = "HM_RecommendHeaderCell"
+    private let HM_RecommendHeaderCellID        = "HM_RecommendHeaderCell"
     // 猜你喜欢
-    private let HM_RecommendGuessLikeCellID  = "HM_RecommendGuessLikeCell"
+    private let HM_RecommendGuessLikeCellID     = "HM_RecommendGuessLikeCell"
     // 热门有声书
-    private let HM_RecommendHotAudioBookCellID = "HM_RecommendHotAudioBookCell"
+    private let HM_RecommendHotAudioBookCellID  = "HM_RecommendHotAudioBookCell"
+    // 广告
+    private let HM_RecommendAdvertCellID        = "HM_RecommendAdvertCell"
+    // 懒人电台
+    private let HM_RecommendOneKeyListenCellID  = "HM_RecommendOneKeyListenCell"
     // 为你推荐
-    private let HM_RecommendForYouCellID     = "HM_RecommendForYouCell"
-
+    private let HM_RecommendForYouCellID        = "HM_RecommendForYouCell"
+    // 推荐直播
+    private let HM_RecommendHomeLiveCellID      = "HM_RecommendHomeLiveCell"
+    
     lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
         let collection = UICollectionView.init(frame: .zero, collectionViewLayout: layout)
@@ -39,9 +51,14 @@ class HM_RecommendViewController: HM_BasisViewController {
         collection.register(HM_RecommendGuessLikeCell.self, forCellWithReuseIdentifier: HM_RecommendGuessLikeCellID)
         // 热门有声书
         collection.register(HM_RecommendHotAudioBookCell.self, forCellWithReuseIdentifier: HM_RecommendHotAudioBookCellID)
-        
+        // 广告
+        collection.register(HM_RecommendAdvertCell.self, forCellWithReuseIdentifier: HM_RecommendAdvertCellID)
+        // 懒人电台
+        collection.register(HM_RecommendOneKeyListenCell.self, forCellWithReuseIdentifier: HM_RecommendOneKeyListenCellID)
         // 为你推荐
         collection.register(HM_RecommendForYouCell.self, forCellWithReuseIdentifier: HM_RecommendForYouCellID)
+         // 推荐直播
+        collection.register(HM_RecommendHomeLiveCell.self, forCellWithReuseIdentifier: HM_RecommendHomeLiveCellID)
         
         collection.uHead = URefreshHeader{ [weak self] in self?.setupLoadData() }
         return collection
@@ -57,6 +74,8 @@ class HM_RecommendViewController: HM_BasisViewController {
         setupView()
        
         setupLoadData()
+        
+        setupLoadAdvertData()
         // Do any additional setup after loading the view.
     }
     // 创建视图
@@ -75,6 +94,20 @@ class HM_RecommendViewController: HM_BasisViewController {
             self.collectionView.reloadData()
         }
         viewModel.refreshDataSource()
+    }
+    // 加载广告数据
+    func setupLoadAdvertData() {
+        HM_RecommendProvider.request(.recommendAdList) { (result) in
+            if  case let .success(response) = result {
+                // 解析数据
+                let data = try?response.mapJSON()
+                let json = JSON(data!)
+                if let adversList = JSONDeserializer<HM_RecommendAdvertModel>.deserializeModelArrayFrom(json: json["data"].description) {
+                    self.recommendAdvertList = adversList as? [HM_RecommendAdvertModel]
+                    self.collectionView.reloadData()
+                }
+            }
+        }
     }
 }
 
@@ -109,6 +142,24 @@ extension HM_RecommendViewController :  UICollectionViewDelegateFlowLayout, UICo
             let cell:HM_RecommendHotAudioBookCell = collectionView.dequeueReusableCell(withReuseIdentifier: HM_RecommendHotAudioBookCellID, for: indexPath) as! HM_RecommendHotAudioBookCell
             cell.delegate = self
             cell.recommendListData = viewModel.homeRecommendListModel?[indexPath.section].list
+            return cell
+        } else if moduleType == "ad" {
+            let cell:HM_RecommendAdvertCell = collectionView.dequeueReusableCell(withReuseIdentifier: HM_RecommendAdvertCellID, for: indexPath) as! HM_RecommendAdvertCell
+            if indexPath.section == 7 {
+                cell.adModel = self.recommendAdvertList?[0]
+            }else if indexPath.section == 13 {
+                cell.adModel = self.recommendAdvertList?[1]
+                // }else if indexPath.section == 17 {
+                // cell.adModel = self.recommnedAdvertList?[2]
+            }
+            return cell
+        }else if moduleType == "oneKeyListen" {
+            let cell:HM_RecommendOneKeyListenCell = collectionView.dequeueReusableCell(withReuseIdentifier: HM_RecommendOneKeyListenCellID, for: indexPath) as! HM_RecommendOneKeyListenCell
+//            cell.oneKeyListenList = viewModel.oneKeyListenList
+            return cell
+        }else if moduleType == "live" {
+            let cell:HM_RecommendHomeLiveCell = collectionView.dequeueReusableCell(withReuseIdentifier: HM_RecommendHomeLiveCellID, for: indexPath) as! HM_RecommendHomeLiveCell
+//            cell.liveList = viewModel.liveList
             return cell
         } else {
             let cell:HM_RecommendForYouCell = collectionView.dequeueReusableCell(withReuseIdentifier: HM_RecommendForYouCellID, for: indexPath) as! HM_RecommendForYouCell

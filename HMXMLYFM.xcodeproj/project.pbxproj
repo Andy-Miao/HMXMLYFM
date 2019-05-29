@@ -40,6 +40,9 @@
 		AD6C3B81228DA08D009BDEC3 /* HM_RecommendHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B80228DA08D009BDEC3 /* HM_RecommendHeaderCell.swift */; };
 		AD6C3B83228DA121009BDEC3 /* HM_RecommendGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B82228DA121009BDEC3 /* HM_RecommendGridCell.swift */; };
 		AD6C3B85228DA14D009BDEC3 /* HM_RecommendNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3B84228DA14D009BDEC3 /* HM_RecommendNewsCell.swift */; };
+		ADAE9934229CF5FD0075819F /* HM_RecommendHomeLiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE9933229CF5FD0075819F /* HM_RecommendHomeLiveCell.swift */; };
+		ADAE9936229CF6160075819F /* HM_RecommendOneKeyListenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE9935229CF6160075819F /* HM_RecommendOneKeyListenCell.swift */; };
+		ADAE9938229CF6290075819F /* HM_RecommendAdvertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE9937229CF6290075819F /* HM_RecommendAdvertCell.swift */; };
 		ADCE5C9E228AD5EF00A1410D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCE5C9D228AD5EF00A1410D /* MainTabBarController.swift */; };
 		ADCE5CA7228ADB3A00A1410D /* HM_BasisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCE5CA6228ADB3A00A1410D /* HM_BasisViewController.swift */; };
 		ADCE5CAB228ADB7C00A1410D /* HM_MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCE5CAA228ADB7C00A1410D /* HM_MineViewController.swift */; };
@@ -120,6 +123,9 @@
 		AD6C3B80228DA08D009BDEC3 /* HM_RecommendHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendHeaderCell.swift; sourceTree = "<group>"; };
 		AD6C3B82228DA121009BDEC3 /* HM_RecommendGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendGridCell.swift; sourceTree = "<group>"; };
 		AD6C3B84228DA14D009BDEC3 /* HM_RecommendNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendNewsCell.swift; sourceTree = "<group>"; };
+		ADAE9933229CF5FD0075819F /* HM_RecommendHomeLiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendHomeLiveCell.swift; sourceTree = "<group>"; };
+		ADAE9935229CF6160075819F /* HM_RecommendOneKeyListenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendOneKeyListenCell.swift; sourceTree = "<group>"; };
+		ADAE9937229CF6290075819F /* HM_RecommendAdvertCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendAdvertCell.swift; sourceTree = "<group>"; };
 		ADCE5C9D228AD5EF00A1410D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		ADCE5CA6228ADB3A00A1410D /* HM_BasisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_BasisViewController.swift; sourceTree = "<group>"; };
 		ADCE5CAA228ADB7C00A1410D /* HM_MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_MineViewController.swift; sourceTree = "<group>"; };
@@ -356,6 +362,9 @@
 		AD6C3B6D228D88B0009BDEC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ADAE9932229CF5DA0075819F /* HomeLive(推荐直播) */,
+				ADAE9931229CF5BD0075819F /* OneKeyListen(懒人电台) */,
+				ADAE9930229CF5920075819F /* Advert(广告) */,
 				ADE09F5522966E24009BEA1F /* HotBook(最热有声书) */,
 				AD69265C229523A300B1AFE2 /* GuessLike(猜你喜欢) */,
 				AD69265B2294E34A00B1AFE2 /* HeaderCell */,
@@ -416,6 +425,30 @@
 				ADE09F5322963B45009BEA1F /* HM_ForYouCell.swift */,
 			);
 			path = "ForYou(为你推荐)";
+			sourceTree = "<group>";
+		};
+		ADAE9930229CF5920075819F /* Advert(广告) */ = {
+			isa = PBXGroup;
+			children = (
+				ADAE9937229CF6290075819F /* HM_RecommendAdvertCell.swift */,
+			);
+			path = "Advert(广告)";
+			sourceTree = "<group>";
+		};
+		ADAE9931229CF5BD0075819F /* OneKeyListen(懒人电台) */ = {
+			isa = PBXGroup;
+			children = (
+				ADAE9935229CF6160075819F /* HM_RecommendOneKeyListenCell.swift */,
+			);
+			path = "OneKeyListen(懒人电台)";
+			sourceTree = "<group>";
+		};
+		ADAE9932229CF5DA0075819F /* HomeLive(推荐直播) */ = {
+			isa = PBXGroup;
+			children = (
+				ADAE9933229CF5FD0075819F /* HM_RecommendHomeLiveCell.swift */,
+			);
+			path = "HomeLive(推荐直播)";
 			sourceTree = "<group>";
 		};
 		ADCE5C9C228AD5A200A1410D /* Main */ = {
@@ -789,6 +822,7 @@
 				ADCE5CB3228ADCCE00A1410D /* HM_ListenViewController.swift in Sources */,
 				AD6C3B7F228D9C8E009BDEC3 /* HM_RecommendForYouCell.swift in Sources */,
 				AD6C3B66228D3CDF009BDEC3 /* HM_VipViewController.swift in Sources */,
+				ADAE9936229CF6160075819F /* HM_RecommendOneKeyListenCell.swift in Sources */,
 				ADCE5CB8228AE02500A1410D /* SYC_Tools.swift in Sources */,
 				ADCE5CB1228ADCBE00A1410D /* HM_HomeViewController.swift in Sources */,
 				ADCE5CAB228ADB7C00A1410D /* HM_MineViewController.swift in Sources */,
@@ -798,6 +832,7 @@
 				AD69265E229523E700B1AFE2 /* HM_RecommendGuessLikeCell.swift in Sources */,
 				AD6C3B7A228D91D5009BDEC3 /* HM_RecommendViewModel.swift in Sources */,
 				ADCE5CBF228AE21700A1410D /* HM_BounceContentView.swift in Sources */,
+				ADAE9934229CF5FD0075819F /* HM_RecommendHomeLiveCell.swift in Sources */,
 				AD67DA65228C0202009CF91D /* WRCustomNavigationBar.swift in Sources */,
 				ADCE5CB5228ADF7200A1410D /* HM_BasisContentView.swift in Sources */,
 				AD6C3B6F228D88D2009BDEC3 /* HM_RecommendHeaderView.swift in Sources */,
@@ -814,6 +849,7 @@
 				AD6C3B7D228D9431009BDEC3 /* HM_RecommendAPI.swift in Sources */,
 				AD6C3B85228DA14D009BDEC3 /* HM_RecommendNewsCell.swift in Sources */,
 				AD67DA67228C0202009CF91D /* WRCycleScrollView.swift in Sources */,
+				ADAE9938229CF6290075819F /* HM_RecommendAdvertCell.swift in Sources */,
 				ADE09F5722966E46009BEA1F /* HM_RecommendHotAudioBookCell.swift in Sources */,
 				AD6C3B77228D8E69009BDEC3 /* HM_RecommendModel.swift in Sources */,
 			);
