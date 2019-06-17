@@ -45,7 +45,6 @@
 		ADAE9938229CF6290075819F /* HM_RecommendAdvertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE9937229CF6290075819F /* HM_RecommendAdvertCell.swift */; };
 		ADAE993A22A4C5680075819F /* HM_OneKeyListenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE993922A4C5670075819F /* HM_OneKeyListenCell.swift */; };
 		ADAE993C22A4F7B10075819F /* HM_RecommendLiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE993B22A4F7B10075819F /* HM_RecommendLiveCell.swift */; };
-		ADAE993F22A4F8880075819F /* ReplicatorLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE993E22A4F8880075819F /* ReplicatorLayer.swift */; };
 		ADAE994F22A609950075819F /* HM_HomeClassifyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE994E22A609950075819F /* HM_HomeClassifyCell.swift */; };
 		ADAE995122A60A440075819F /* HM_HomeClassifyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE995022A60A440075819F /* HM_HomeClassifyHeaderView.swift */; };
 		ADAE995322A60A5E0075819F /* HM_HomeClassifyFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE995222A60A5E0075819F /* HM_HomeClassifyFooterView.swift */; };
@@ -63,6 +62,7 @@
 		ADE09F5422963B45009BEA1F /* HM_ForYouCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE09F5322963B45009BEA1F /* HM_ForYouCell.swift */; };
 		ADE09F5722966E46009BEA1F /* HM_RecommendHotAudioBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE09F5622966E46009BEA1F /* HM_RecommendHotAudioBookCell.swift */; };
 		ADE09F592296714F009BEA1F /* HM_HotAudioBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE09F582296714F009BEA1F /* HM_HotAudioBookCell.swift */; };
+		ADF81A0622B76F2B00222DB1 /* ReplicatorLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF81A0522B76F2B00222DB1 /* ReplicatorLayer.swift */; };
 		D5DF577DFAB14C0339BF5414 /* Pods_HMXMLYFMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7490E8C586D7482029AE4025 /* Pods_HMXMLYFMUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,7 +134,6 @@
 		ADAE9937229CF6290075819F /* HM_RecommendAdvertCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendAdvertCell.swift; sourceTree = "<group>"; };
 		ADAE993922A4C5670075819F /* HM_OneKeyListenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_OneKeyListenCell.swift; sourceTree = "<group>"; };
 		ADAE993B22A4F7B10075819F /* HM_RecommendLiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendLiveCell.swift; sourceTree = "<group>"; };
-		ADAE993E22A4F8880075819F /* ReplicatorLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplicatorLayer.swift; sourceTree = "<group>"; };
 		ADAE994E22A609950075819F /* HM_HomeClassifyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_HomeClassifyCell.swift; sourceTree = "<group>"; };
 		ADAE995022A60A440075819F /* HM_HomeClassifyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_HomeClassifyHeaderView.swift; sourceTree = "<group>"; };
 		ADAE995222A60A5E0075819F /* HM_HomeClassifyFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_HomeClassifyFooterView.swift; sourceTree = "<group>"; };
@@ -152,6 +151,7 @@
 		ADE09F5322963B45009BEA1F /* HM_ForYouCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_ForYouCell.swift; sourceTree = "<group>"; };
 		ADE09F5622966E46009BEA1F /* HM_RecommendHotAudioBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_RecommendHotAudioBookCell.swift; sourceTree = "<group>"; };
 		ADE09F582296714F009BEA1F /* HM_HotAudioBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_HotAudioBookCell.swift; sourceTree = "<group>"; };
+		ADF81A0522B76F2B00222DB1 /* ReplicatorLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplicatorLayer.swift; sourceTree = "<group>"; };
 		D329B72AAA636B8C8417955F /* Pods-HMXMLYFMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HMXMLYFMUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HMXMLYFMUITests/Pods-HMXMLYFMUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -269,7 +269,7 @@
 		AD67DA4E228BDF89009CF91D /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				ADAE993D22A4F8880075819F /* ReplicatorLayer */,
+				ADF81A0422B76F2B00222DB1 /* ReplicatorLayer */,
 				AD6C3B72228D8ABC009BDEC3 /* Refresh */,
 				AD67DA5D228C0201009CF91D /* WRNavigationBar */,
 			);
@@ -332,6 +332,7 @@
 		AD6C3B5E228D3B0D009BDEC3 /* Recommend(推荐) */ = {
 			isa = PBXGroup;
 			children = (
+				AD6C3B5F228D3B0D009BDEC3 /* HM_RecommendViewController.swift */,
 				AD6C3B7B228D9415009BDEC3 /* API */,
 				AD6C3B78228D91B5009BDEC3 /* ViewModel */,
 				AD6C3B75228D8CB4009BDEC3 /* Model */,
@@ -389,7 +390,6 @@
 				AD6926592294E28100B1AFE2 /* NewsCell(头条滚动) */,
 				AD6C3B87228E4F84009BDEC3 /* ForYou(为你推荐) */,
 				AD6C3B86228E4F64009BDEC3 /* HeaderAndFooter */,
-				AD6C3B5F228D3B0D009BDEC3 /* HM_RecommendViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -468,15 +468,6 @@
 				ADAE993B22A4F7B10075819F /* HM_RecommendLiveCell.swift */,
 			);
 			path = "HomeLive(推荐直播)";
-			sourceTree = "<group>";
-		};
-		ADAE993D22A4F8880075819F /* ReplicatorLayer */ = {
-			isa = PBXGroup;
-			children = (
-				ADAE993E22A4F8880075819F /* ReplicatorLayer.swift */,
-			);
-			name = ReplicatorLayer;
-			path = "../../../../../../Downloads/LBXMLYFM-Swift-master/LBFM-Swift/Lib/ReplicatorLayer";
 			sourceTree = "<group>";
 		};
 		ADAE994A22A6091E0075819F /* API */ = {
@@ -610,6 +601,14 @@
 				ADE09F582296714F009BEA1F /* HM_HotAudioBookCell.swift */,
 			);
 			path = "HotBook(最热有声书)";
+			sourceTree = "<group>";
+		};
+		ADF81A0422B76F2B00222DB1 /* ReplicatorLayer */ = {
+			isa = PBXGroup;
+			children = (
+				ADF81A0522B76F2B00222DB1 /* ReplicatorLayer.swift */,
+			);
+			path = ReplicatorLayer;
 			sourceTree = "<group>";
 		};
 		BF9748290BEEDDD9A57E0CAE /* Frameworks */ = {
@@ -871,6 +870,7 @@
 				AD6C3B60228D3B0D009BDEC3 /* HM_RecommendViewController.swift in Sources */,
 				AD6C3B74228D8ABC009BDEC3 /* URefresh.swift in Sources */,
 				ADCE5CBC228AE06F00A1410D /* String+SYC.swift in Sources */,
+				ADF81A0622B76F2B00222DB1 /* ReplicatorLayer.swift in Sources */,
 				ADAE993C22A4F7B10075819F /* HM_RecommendLiveCell.swift in Sources */,
 				AD6C3B81228DA08D009BDEC3 /* HM_RecommendHeaderCell.swift in Sources */,
 				ADE09F5422963B45009BEA1F /* HM_ForYouCell.swift in Sources */,
@@ -893,7 +893,6 @@
 				AD69266022952BA700B1AFE2 /* HM_GuessYouLikeCell.swift in Sources */,
 				AD69265E229523E700B1AFE2 /* HM_RecommendGuessLikeCell.swift in Sources */,
 				AD6C3B7A228D91D5009BDEC3 /* HM_RecommendViewModel.swift in Sources */,
-				ADAE993F22A4F8880075819F /* ReplicatorLayer.swift in Sources */,
 				ADCE5CBF228AE21700A1410D /* HM_BounceContentView.swift in Sources */,
 				ADAE994F22A609950075819F /* HM_HomeClassifyCell.swift in Sources */,
 				ADAE9934229CF5FD0075819F /* HM_RecommendHomeLiveCell.swift in Sources */,
