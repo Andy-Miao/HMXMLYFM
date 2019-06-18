@@ -200,7 +200,7 @@ extension HM_RecommendViewController :  UICollectionViewDelegateFlowLayout, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let moduleType = viewModel.homeRecommendListModel?[indexPath.section].moduleType
+         let moduleType  = viewModel.homeRecommendListModel?[indexPath.section].moduleType
         if kind == UICollectionElementKindSectionHeader {
             let headerView : HM_RecommendHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: HM_RecommendHeaderViewID, for: indexPath) as! HM_RecommendHeaderView
             headerView.homeRecommendList = viewModel.homeRecommendListModel?[indexPath.section]

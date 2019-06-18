@@ -24,8 +24,9 @@ class HM_HomeClassifyFooterView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = DOWN_COLOR
         
-        setupView()
+//        setupView()
     }
     
     required init?(coder aDecoder: NSCoder) {
