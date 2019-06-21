@@ -15,6 +15,9 @@
 		AD29C74922BD00A6001BE326 /* HM_VipBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29C74822BD00A6001BE326 /* HM_VipBannerCell.swift */; };
 		AD29C74B22BD072E001BE326 /* HM_HomeVipCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29C74A22BD072E001BE326 /* HM_HomeVipCategoriesCell.swift */; };
 		AD29C74D22BD0747001BE326 /* HM_VipCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29C74C22BD0747001BE326 /* HM_VipCategoryCell.swift */; };
+		AD29C74F22BD17E6001BE326 /* HM_VipHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29C74E22BD17E6001BE326 /* HM_VipHeaderView.swift */; };
+		AD29C75122BD1880001BE326 /* HM_VipFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29C75022BD1880001BE326 /* HM_VipFooterView.swift */; };
+		AD29C75322BD19FD001BE326 /* HM_VipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29C75222BD19FD001BE326 /* HM_VipCell.swift */; };
 		AD6130CC228538020091C020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6130CB228538020091C020 /* AppDelegate.swift */; };
 		AD6130D1228538020091C020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6130CF228538020091C020 /* Main.storyboard */; };
 		AD6130D3228538020091C020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6130D2228538020091C020 /* Assets.xcassets */; };
@@ -116,6 +119,9 @@
 		AD29C74822BD00A6001BE326 /* HM_VipBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_VipBannerCell.swift; sourceTree = "<group>"; };
 		AD29C74A22BD072E001BE326 /* HM_HomeVipCategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_HomeVipCategoriesCell.swift; sourceTree = "<group>"; };
 		AD29C74C22BD0747001BE326 /* HM_VipCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_VipCategoryCell.swift; sourceTree = "<group>"; };
+		AD29C74E22BD17E6001BE326 /* HM_VipHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_VipHeaderView.swift; sourceTree = "<group>"; };
+		AD29C75022BD1880001BE326 /* HM_VipFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_VipFooterView.swift; sourceTree = "<group>"; };
+		AD29C75222BD19FD001BE326 /* HM_VipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_VipCell.swift; sourceTree = "<group>"; };
 		AD6130C8228538020091C020 /* HMXMLYFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMXMLYFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6130CB228538020091C020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6130D0228538020091C020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -276,6 +282,8 @@
 		AD29C74422BCFFEF001BE326 /* HeaderAndFooter */ = {
 			isa = PBXGroup;
 			children = (
+				AD29C74E22BD17E6001BE326 /* HM_VipHeaderView.swift */,
+				AD29C75022BD1880001BE326 /* HM_VipFooterView.swift */,
 			);
 			path = HeaderAndFooter;
 			sourceTree = "<group>";
@@ -283,6 +291,7 @@
 		AD29C74522BD0003001BE326 /* VIP(课) */ = {
 			isa = PBXGroup;
 			children = (
+				AD29C75222BD19FD001BE326 /* HM_VipCell.swift */,
 			);
 			path = "VIP(课)";
 			sourceTree = "<group>";
@@ -1071,6 +1080,7 @@
 				ADF81A0622B76F2B00222DB1 /* ReplicatorLayer.swift in Sources */,
 				ADF81A0E22B8904000222DB1 /* HM_HomeClassifyViewModel.swift in Sources */,
 				ADAE993C22A4F7B10075819F /* HM_RecommendLiveCell.swift in Sources */,
+				AD29C75122BD1880001BE326 /* HM_VipFooterView.swift in Sources */,
 				AD6C3B81228DA08D009BDEC3 /* HM_RecommendHeaderCell.swift in Sources */,
 				ADE09F5422963B45009BEA1F /* HM_ForYouCell.swift in Sources */,
 				AD6C3B71228D88F1009BDEC3 /* HM_RecommendFooterView.swift in Sources */,
@@ -1080,6 +1090,7 @@
 				ADAE995322A60A5E0075819F /* HM_HomeClassifyFooterView.swift in Sources */,
 				AD67DA4D228BDEF3009CF91D /* HM_BasisNavigationController.swift in Sources */,
 				AD67DA66228C0202009CF91D /* WRProxy.swift in Sources */,
+				AD29C75322BD19FD001BE326 /* HM_VipCell.swift in Sources */,
 				AD6130CC228538020091C020 /* AppDelegate.swift in Sources */,
 				ADCE5CB3228ADCCE00A1410D /* HM_ListenViewController.swift in Sources */,
 				AD6C3B7F228D9C8E009BDEC3 /* HM_RecommendForYouCell.swift in Sources */,
@@ -1097,6 +1108,7 @@
 				AD69266022952BA700B1AFE2 /* HM_GuessYouLikeCell.swift in Sources */,
 				AD69265E229523E700B1AFE2 /* HM_RecommendGuessLikeCell.swift in Sources */,
 				AD6C3B7A228D91D5009BDEC3 /* HM_RecommendViewModel.swift in Sources */,
+				AD29C74F22BD17E6001BE326 /* HM_VipHeaderView.swift in Sources */,
 				ADCE5CBF228AE21700A1410D /* HM_BounceContentView.swift in Sources */,
 				AD29C74122BCCB00001BE326 /* HM_VipViewModel.swift in Sources */,
 				ADF81A2122B8E29000222DB1 /* HM_HomeBroadcastViewModel.swift in Sources */,
