@@ -125,11 +125,12 @@ extension HM_RecommendViewController :  UICollectionViewDelegateFlowLayout, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let moduleType = viewModel.homeRecommendListModel?[indexPath.section].moduleType
+        NSLog("hm --- 这是第 \(indexPath.section) 组 --- " + moduleType!)
         if moduleType == "focus" || moduleType == "square" || moduleType == "topBuzz" {
             let cell:HM_RecommendHeaderCell = collectionView.dequeueReusableCell(withReuseIdentifier: HM_RecommendHeaderCellID, for: indexPath) as! HM_RecommendHeaderCell
-            cell.focusModel = viewModel.focusModel
             cell.squareList = viewModel.squareListModel
             cell.topBuzzListData = viewModel.topBuzzListmodel
+            cell.focusModel = viewModel.focusModel
             cell.delegate = self
             return cell
         } else if moduleType == "guessYouLike" || moduleType == "paidCategory" || moduleType == "categoriesForLong" || moduleType == "cityCategory" {
@@ -146,20 +147,20 @@ extension HM_RecommendViewController :  UICollectionViewDelegateFlowLayout, UICo
         } else if moduleType == "ad" {
             let cell:HM_RecommendAdvertCell = collectionView.dequeueReusableCell(withReuseIdentifier: HM_RecommendAdvertCellID, for: indexPath) as! HM_RecommendAdvertCell
             if indexPath.section == 7 {
-                cell.adModel = self.recommendAdvertList?[0]
-            }else if indexPath.section == 13 {
-                cell.adModel = self.recommendAdvertList?[1]
-                // }else if indexPath.section == 17 {
-                // cell.adModel = self.recommnedAdvertList?[2]
+                cell.advertModel = self.recommendAdvertList?[0]
+            } else if indexPath.section == 13 {
+                cell.advertModel = self.recommendAdvertList?[1]
+            } else if indexPath.section == 17 {
+                cell.advertModel = self.recommendAdvertList?[2]
             }
             return cell
-        }else if moduleType == "oneKeyListen" {
+        } else if moduleType == "oneKeyListen" {
             let cell:HM_RecommendOneKeyListenCell = collectionView.dequeueReusableCell(withReuseIdentifier: HM_RecommendOneKeyListenCellID, for: indexPath) as! HM_RecommendOneKeyListenCell
-//            cell.oneKeyListenList = viewModel.oneKeyListenList
+                cell.oneKeyListenList = viewModel.oneKeyListenListModel
             return cell
-        }else if moduleType == "live" {
+        } else if moduleType == "live" {
             let cell:HM_RecommendHomeLiveCell = collectionView.dequeueReusableCell(withReuseIdentifier: HM_RecommendHomeLiveCellID, for: indexPath) as! HM_RecommendHomeLiveCell
-//            cell.liveList = viewModel.liveList
+            cell.liveList = viewModel.liveListModel
             return cell
         } else {
             let cell:HM_RecommendForYouCell = collectionView.dequeueReusableCell(withReuseIdentifier: HM_RecommendForYouCellID, for: indexPath) as! HM_RecommendForYouCell

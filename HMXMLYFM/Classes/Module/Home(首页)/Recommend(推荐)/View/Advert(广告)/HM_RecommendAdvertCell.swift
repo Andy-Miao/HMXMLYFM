@@ -41,37 +41,34 @@ class HM_RecommendAdvertCell: UICollectionViewCell {
         self.addSubview(self.imageView)
         self.addSubview(self.titileLabel)
         self.addSubview(self.subLabel)
-    }
-    
-    var adModel:HM_RecommendAdvertModel? {
-        didSet {
-            self.imageView.image = UIImage(named: "fj.jpg")
-            self.imageView.contentMode = .scaleAspectFill
-            self.imageView.clipsToBounds = true
-            self.imageView.snp.makeConstraints { (make) in
-                make.left.top.equalToSuperview().offset(15)
-                make.right.equalToSuperview().offset(-15)
-                make.bottom.equalToSuperview().offset(-60)
-            }
-            
-            self.titileLabel.text = "那些事"
-            self.titileLabel.snp.makeConstraints { (make) in
-                make.left.equalToSuperview().offset(15)
-                make.right.equalToSuperview().offset(-15)
-                make.top.equalTo(self.imageView.snp.bottom)
-                make.height.equalTo(30)
-            }
-            
-            self.subLabel.text = "开年会发年终奖呀领导开年会发年终奖呀"
-            self.subLabel.snp.makeConstraints { (make) in
-                make.left.equalToSuperview().offset(15)
-                make.right.equalToSuperview().offset(-15)
-                make.top.equalTo(self.titileLabel.snp.bottom)
-                make.height.equalTo(30)
-                make.bottom.equalToSuperview()
-            }
+        
+        self.imageView.image = UIImage(named: "fj.jpg")
+        self.imageView.contentMode = .scaleAspectFill
+        self.imageView.clipsToBounds = true
+        self.imageView.snp.makeConstraints { (make) in
+            make.left.top.equalToSuperview().offset(15)
+            make.right.equalToSuperview().offset(-15)
+            make.bottom.equalToSuperview().offset(-60)
+        }
+        
+        self.titileLabel.text = "那些事"
+        self.titileLabel.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(15)
+            make.right.equalToSuperview().offset(-15)
+            make.top.equalTo(self.imageView.snp.bottom)
+            make.height.equalTo(30)
+        }
+        
+        self.subLabel.text = "开年会发年终奖呀领导开年会发年终奖呀"
+        self.subLabel.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(15)
+            make.right.equalToSuperview().offset(-15)
+            make.top.equalTo(self.titileLabel.snp.bottom)
+            make.height.equalTo(30)
+            make.bottom.equalToSuperview()
         }
     }
+    
     
     // 获取数据
     var advertModel:HM_RecommendAdvertModel? {

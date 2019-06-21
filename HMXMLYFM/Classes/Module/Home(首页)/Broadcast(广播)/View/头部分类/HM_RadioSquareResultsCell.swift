@@ -111,5 +111,6 @@ extension HM_RadioSquareResultsCell: UICollectionViewDataSource, UICollectionVie
         guard let api = params["api"] else{return ""}
         return api as! String
     }
+    
 }
 

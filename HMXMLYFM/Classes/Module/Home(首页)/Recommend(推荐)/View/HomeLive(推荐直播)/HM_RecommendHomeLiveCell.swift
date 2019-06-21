@@ -50,6 +50,9 @@ class HM_RecommendHomeLiveCell: UICollectionViewCell {
     func setupView() {
         self.addSubview(self.collectionView)
         self.collectionView.snp.makeConstraints { (make) in
+//            make.left.top.equalTo(15)
+//            make.bottom.equalToSuperview().offset(-50)
+//            make.right.equalToSuperview().offset(-15)
             make.edges.equalToSuperview().inset(UIEdgeInsetsMake(15, 15, 50, 15))
         }
         

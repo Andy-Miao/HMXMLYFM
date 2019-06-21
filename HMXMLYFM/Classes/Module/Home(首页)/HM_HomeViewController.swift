@@ -20,7 +20,7 @@ class HM_HomeViewController: HM_BasisViewController {
     func setupView() {
         
         let pageStyle = DNSPageStyle()
-        // 视图不能f滑动
+        // 视图不能滑动
         pageStyle.isTitleViewScrollEnabled = false
         // 标题可缩放
         pageStyle.isTitleScaleEnabled = true

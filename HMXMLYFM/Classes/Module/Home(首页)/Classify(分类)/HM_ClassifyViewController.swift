@@ -22,8 +22,8 @@ class HM_ClassifyViewController: HM_BasisViewController {
         collection.delegate = self
         collection.dataSource = self
         collection.showsVerticalScrollIndicator = false
-        collection.register(HM_HomeClassifyFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: HM_HomeClassifyFooterViewID)
-        collection.register(HM_HomeClassifyHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,  withReuseIdentifier: HM_HomeClassifyHeaderViewID)
+        collection.register(HM_HomeClassifyHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,  withReuseIdentifier: HM_HomeClassifyHeaderViewID)
+        collection.register(HM_HomeClassifyFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: HM_HomeClassifyFooterViewID)
         collection.backgroundColor = DOWN_COLOR
         return  collection
     }()
@@ -57,6 +57,10 @@ class HM_ClassifyViewController: HM_BasisViewController {
 }
 
 extension HM_ClassifyViewController : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return viewModel.numberOfSections(collection: collectionView)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfItemsIn(section: section)
     }
@@ -105,6 +109,7 @@ extension HM_ClassifyViewController : UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionElementKindSectionHeader {
             let headerView: HM_HomeClassifyHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: HM_HomeClassifyHeaderViewID, for: indexPath) as! HM_HomeClassifyHeaderView
+            headerView.titleStr = viewModel.classifyModel?[indexPath.section].groupName
             return headerView
         } else if kind == UICollectionElementKindSectionFooter {
             let footerView :HM_HomeClassifyFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: HM_HomeClassifyFooterViewID, for: indexPath) as! HM_HomeClassifyFooterView
