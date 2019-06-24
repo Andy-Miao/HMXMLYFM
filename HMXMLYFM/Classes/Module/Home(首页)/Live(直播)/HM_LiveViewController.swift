@@ -7,9 +7,24 @@
 //
 
 import UIKit
+import SwiftyJSON
+import HandyJSON
+
+let HM_HomeLiveSectionGrid     = 0   // 分类section
+let HM_HomeLiveSectionBanner   = 1   // 滚动图片section
+let HM_HomeLiveSectionRank     = 2   // 排行榜section
+let HM_HomeLiveSectionLive     = 3   // 直播section
 
 class HM_LiveViewController: HM_BasisViewController {
-
+    var lives:[HM_LivesModel]?
+    
+    private let HM_HomeLiveHeaderViewID = "HM_HomeLiveHeaderView"
+    private let HM_HomeLiveGridCellID   = "HM_HomeLiveGridCell"
+    private let HM_HomeLiveBannerCellID = "HM_HomeLiveBannerCell"
+    private let HM_HomeLiveRankCellID   = "HM_HomeLiveRankCell"
+    private let HM_RecommendLiveCellID = "HM_RecommendLiveCell"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

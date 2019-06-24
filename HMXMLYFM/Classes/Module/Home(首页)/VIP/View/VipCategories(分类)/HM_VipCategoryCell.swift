@@ -45,11 +45,11 @@ class HM_VipCategoryCell: UICollectionViewCell {
     }
     
     var categoryBtnModel: HM_CategoryBtnModel? {
-        guard let model = categoryBtnModel  else {
-           return
+        didSet {
+            guard let model = categoryBtnModel else { return }
+            
+            self.imageView.kf.setImage(with: URL(string: model.coverPath!))
+            self.titleLabel.text = model.title
         }
-        
-        self.imageView.kf.setImage(with: URL(string: model.coverPath!))
-        self.titleLabel.text = model.title
     }
 }

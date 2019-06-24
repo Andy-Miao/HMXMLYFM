@@ -18,6 +18,14 @@
 		AD29C74F22BD17E6001BE326 /* HM_VipHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29C74E22BD17E6001BE326 /* HM_VipHeaderView.swift */; };
 		AD29C75122BD1880001BE326 /* HM_VipFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29C75022BD1880001BE326 /* HM_VipFooterView.swift */; };
 		AD29C75322BD19FD001BE326 /* HM_VipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29C75222BD19FD001BE326 /* HM_VipCell.swift */; };
+		AD4ED97C22C068C1003020A1 /* HM_HomeVipHotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4ED97B22C068C1003020A1 /* HM_HomeVipHotCell.swift */; };
+		AD4ED97E22C06A82003020A1 /* HM_VipHotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4ED97D22C06A82003020A1 /* HM_VipHotCell.swift */; };
+		AD4ED98022C06EC9003020A1 /* HM_HomeVipEnjoyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4ED97F22C06EC9003020A1 /* HM_HomeVipEnjoyCell.swift */; };
+		AD4ED98222C0722C003020A1 /* HM_VipEnjoyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4ED98122C0722C003020A1 /* HM_VipEnjoyCell.swift */; };
+		AD4ED99922C084EC003020A1 /* HM_HomeLiveHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4ED99822C084EC003020A1 /* HM_HomeLiveHeaderView.swift */; };
+		AD4ED99B22C08598003020A1 /* HM_HomeLiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4ED99A22C08598003020A1 /* HM_HomeLiveCell.swift */; };
+		AD4ED99D22C085FA003020A1 /* HM_HomeLiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4ED99C22C085FA003020A1 /* HM_HomeLiveModel.swift */; };
+		AD4ED99F22C0869A003020A1 /* HM_HomeLiveBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4ED99E22C0869A003020A1 /* HM_HomeLiveBannerCell.swift */; };
 		AD6130CC228538020091C020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6130CB228538020091C020 /* AppDelegate.swift */; };
 		AD6130D1228538020091C020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6130CF228538020091C020 /* Main.storyboard */; };
 		AD6130D3228538020091C020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6130D2228538020091C020 /* Assets.xcassets */; };
@@ -122,6 +130,14 @@
 		AD29C74E22BD17E6001BE326 /* HM_VipHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_VipHeaderView.swift; sourceTree = "<group>"; };
 		AD29C75022BD1880001BE326 /* HM_VipFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_VipFooterView.swift; sourceTree = "<group>"; };
 		AD29C75222BD19FD001BE326 /* HM_VipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_VipCell.swift; sourceTree = "<group>"; };
+		AD4ED97B22C068C1003020A1 /* HM_HomeVipHotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_HomeVipHotCell.swift; sourceTree = "<group>"; };
+		AD4ED97D22C06A82003020A1 /* HM_VipHotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_VipHotCell.swift; sourceTree = "<group>"; };
+		AD4ED97F22C06EC9003020A1 /* HM_HomeVipEnjoyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_HomeVipEnjoyCell.swift; sourceTree = "<group>"; };
+		AD4ED98122C0722C003020A1 /* HM_VipEnjoyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_VipEnjoyCell.swift; sourceTree = "<group>"; };
+		AD4ED99822C084EC003020A1 /* HM_HomeLiveHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_HomeLiveHeaderView.swift; sourceTree = "<group>"; };
+		AD4ED99A22C08598003020A1 /* HM_HomeLiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_HomeLiveCell.swift; sourceTree = "<group>"; };
+		AD4ED99C22C085FA003020A1 /* HM_HomeLiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_HomeLiveModel.swift; sourceTree = "<group>"; };
+		AD4ED99E22C0869A003020A1 /* HM_HomeLiveBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_HomeLiveBannerCell.swift; sourceTree = "<group>"; };
 		AD6130C8228538020091C020 /* HMXMLYFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMXMLYFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6130CB228538020091C020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6130D0228538020091C020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -299,6 +315,8 @@
 		AD29C74622BD001A001BE326 /* VIPHot(热播课) */ = {
 			isa = PBXGroup;
 			children = (
+				AD4ED97B22C068C1003020A1 /* HM_HomeVipHotCell.swift */,
+				AD4ED97D22C06A82003020A1 /* HM_VipHotCell.swift */,
 			);
 			path = "VIPHot(热播课)";
 			sourceTree = "<group>";
@@ -306,8 +324,66 @@
 		AD29C74722BD0081001BE326 /* Enjoy(喜爱课) */ = {
 			isa = PBXGroup;
 			children = (
+				AD4ED97F22C06EC9003020A1 /* HM_HomeVipEnjoyCell.swift */,
+				AD4ED98122C0722C003020A1 /* HM_VipEnjoyCell.swift */,
 			);
 			path = "Enjoy(喜爱课)";
+			sourceTree = "<group>";
+		};
+		AD4ED99122C08349003020A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD4ED99722C0842F003020A1 /* Rank(排行榜) */,
+				AD4ED99622C0841C003020A1 /* Header */,
+				AD4ED99522C0840B003020A1 /* Banner(轮播图) */,
+				AD4ED99822C084EC003020A1 /* HM_HomeLiveHeaderView.swift */,
+				AD4ED99A22C08598003020A1 /* HM_HomeLiveCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD4ED99222C08354003020A1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD4ED99322C08363003020A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD4ED99C22C085FA003020A1 /* HM_HomeLiveModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD4ED99422C0836C003020A1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AD4ED99522C0840B003020A1 /* Banner(轮播图) */ = {
+			isa = PBXGroup;
+			children = (
+				AD4ED99E22C0869A003020A1 /* HM_HomeLiveBannerCell.swift */,
+			);
+			path = "Banner(轮播图)";
+			sourceTree = "<group>";
+		};
+		AD4ED99622C0841C003020A1 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		AD4ED99722C0842F003020A1 /* Rank(排行榜) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Rank(排行榜)";
 			sourceTree = "<group>";
 		};
 		AD6130BF228538010091C020 = {
@@ -495,6 +571,10 @@
 		AD6C3B67228D3CFD009BDEC3 /* Live(直播) */ = {
 			isa = PBXGroup;
 			children = (
+				AD4ED99422C0836C003020A1 /* API */,
+				AD4ED99322C08363003020A1 /* Model */,
+				AD4ED99222C08354003020A1 /* ViewModel */,
+				AD4ED99122C08349003020A1 /* View */,
 				AD6C3B68228D3CFD009BDEC3 /* HM_LiveViewController.swift */,
 			);
 			path = "Live(直播)";
@@ -1085,11 +1165,13 @@
 				ADE09F5422963B45009BEA1F /* HM_ForYouCell.swift in Sources */,
 				AD6C3B71228D88F1009BDEC3 /* HM_RecommendFooterView.swift in Sources */,
 				AD29C74D22BD0747001BE326 /* HM_VipCategoryCell.swift in Sources */,
+				AD4ED99922C084EC003020A1 /* HM_HomeLiveHeaderView.swift in Sources */,
 				ADCE5C9E228AD5EF00A1410D /* MainTabBarController.swift in Sources */,
 				AD29C73F22BCC7A7001BE326 /* HM_VipAPI.swift in Sources */,
 				ADAE995322A60A5E0075819F /* HM_HomeClassifyFooterView.swift in Sources */,
 				AD67DA4D228BDEF3009CF91D /* HM_BasisNavigationController.swift in Sources */,
 				AD67DA66228C0202009CF91D /* WRProxy.swift in Sources */,
+				AD4ED99B22C08598003020A1 /* HM_HomeLiveCell.swift in Sources */,
 				AD29C75322BD19FD001BE326 /* HM_VipCell.swift in Sources */,
 				AD6130CC228538020091C020 /* AppDelegate.swift in Sources */,
 				ADCE5CB3228ADCCE00A1410D /* HM_ListenViewController.swift in Sources */,
@@ -1107,15 +1189,18 @@
 				ADF81A1322B8C20400222DB1 /* HM_RadioCategoriesCell.swift in Sources */,
 				AD69266022952BA700B1AFE2 /* HM_GuessYouLikeCell.swift in Sources */,
 				AD69265E229523E700B1AFE2 /* HM_RecommendGuessLikeCell.swift in Sources */,
+				AD4ED98022C06EC9003020A1 /* HM_HomeVipEnjoyCell.swift in Sources */,
 				AD6C3B7A228D91D5009BDEC3 /* HM_RecommendViewModel.swift in Sources */,
 				AD29C74F22BD17E6001BE326 /* HM_VipHeaderView.swift in Sources */,
 				ADCE5CBF228AE21700A1410D /* HM_BounceContentView.swift in Sources */,
+				AD4ED97E22C06A82003020A1 /* HM_VipHotCell.swift in Sources */,
 				AD29C74122BCCB00001BE326 /* HM_VipViewModel.swift in Sources */,
 				ADF81A2122B8E29000222DB1 /* HM_HomeBroadcastViewModel.swift in Sources */,
 				ADAE994F22A609950075819F /* HM_HomeClassifyCell.swift in Sources */,
 				ADAE9934229CF5FD0075819F /* HM_RecommendHomeLiveCell.swift in Sources */,
 				AD67DA65228C0202009CF91D /* WRCustomNavigationBar.swift in Sources */,
 				ADF81A0A22B8883D00222DB1 /* HM_HomeClassifyAPI.swift in Sources */,
+				AD4ED98222C0722C003020A1 /* HM_VipEnjoyCell.swift in Sources */,
 				ADF81A3222B8EF4600222DB1 /* HM_RadioSquareCell.swift in Sources */,
 				AD29C74922BD00A6001BE326 /* HM_VipBannerCell.swift in Sources */,
 				ADCE5CB5228ADF7200A1410D /* HM_BasisContentView.swift in Sources */,
@@ -1130,12 +1215,15 @@
 				ADCE5CAD228ADC9B00A1410D /* HM_FindViewController.swift in Sources */,
 				ADF81A1622B8C24E00222DB1 /* HM_RadioHeaderView.swift in Sources */,
 				ADCE5CA7228ADB3A00A1410D /* HM_BasisViewController.swift in Sources */,
+				AD4ED99D22C085FA003020A1 /* HM_HomeLiveModel.swift in Sources */,
 				ADF81A1E22B8DD0A00222DB1 /* HM_HomeBroadcastAPI.swift in Sources */,
 				AD6C3B63228D3B36009BDEC3 /* HM_ClassifyViewController.swift in Sources */,
 				AD67DA64228C0202009CF91D /* WRNavigationBar.swift in Sources */,
 				AD67DA5C228BE123009CF91D /* HM_Header.swift in Sources */,
+				AD4ED97C22C068C1003020A1 /* HM_HomeVipHotCell.swift in Sources */,
 				ADF81A1822B8C26600222DB1 /* HM_RadioFooterView.swift in Sources */,
 				ADAE995122A60A440075819F /* HM_HomeClassifyHeaderView.swift in Sources */,
+				AD4ED99F22C0869A003020A1 /* HM_HomeLiveBannerCell.swift in Sources */,
 				AD6C3B7D228D9431009BDEC3 /* HM_RecommendAPI.swift in Sources */,
 				AD6C3B85228DA14D009BDEC3 /* HM_RecommendNewsCell.swift in Sources */,
 				AD67DA67228C0202009CF91D /* WRCycleScrollView.swift in Sources */,

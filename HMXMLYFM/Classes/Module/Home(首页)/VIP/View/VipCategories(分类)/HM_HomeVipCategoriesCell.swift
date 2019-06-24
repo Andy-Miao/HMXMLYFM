@@ -72,17 +72,20 @@ extension HM_HomeVipCategoriesCell: UICollectionViewDelegateFlowLayout, UICollec
    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: HM_VipCategoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: HM_VipCategoryCellID, for: indexPath) as! HM_VipCategoryCell
-        cell.categoryBtnModel = self.categoryBtnList[indexPath.row]
+        cell.categoryBtnModel = self.categoryBtnList?[indexPath.row]
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let string = self.categoryBtnList?[indexPath.row].properties?.uri else {
             let id = "0"
             let url = self.categoryBtnList?[indexPath.row].url ?? ""
-            delegate?.homeVipCategoriesCellItemClick(id: id, url: url, title: self.categoryBtnList?[indexPath.row].title!)
+            delegate?.homeVipCategoriesCellItemClick(id: id, url: url, title: (self.categoryBtnList?[indexPath.row].title)!)
             return
         }
-        let id  = get
+        let id  = getUrlCategoryId(url: string)
+        let url = self.categoryBtnList?[indexPath.row].url ?? "0"
+        delegate?.homeVipCategoriesCellItemClick(id: id, url: url , title: (self.categoryBtnList?[indexPath.row].title)!)
     }
     
     func getUrlCategoryId(url:String) -> String {

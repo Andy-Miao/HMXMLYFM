@@ -61,10 +61,10 @@ class HM_VipCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
-        setUpLayout()
+        setupView()
     }
     
-    func setUpLayout(){
+    func setupView(){
         self.addSubview(self.picView)
         self.picView.image = UIImage(named: "pic1.jpeg")
         self.picView.snp.makeConstraints { (make) in
