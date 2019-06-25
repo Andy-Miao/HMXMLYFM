@@ -14,7 +14,7 @@ struct HM_HomeBroadcastModel: HandyJSON {
     var ret: Int = 0
 }
 
-struct HM_RadiosModel {
+struct HM_RadiosModel: HandyJSON {
     var categories: [HM_RadiosCategoriesModel]?
     var localRadios: [HM_LocalRadiosModel]?
     var location: String?

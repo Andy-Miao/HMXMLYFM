@@ -49,7 +49,7 @@ class HM_VipViewController: HM_BasisViewController {
         tableView.register(HM_VipHeaderView.self, forHeaderFooterViewReuseIdentifier: HM_VipHeaderViewID)
         tableView.register(HM_VipFooterView.self, forHeaderFooterViewReuseIdentifier: HM_VipFooterViewID)
         // 注册分区cell
-        tableView.register(HM_VipCell.self, forHeaderFooterViewReuseIdentifier: HM_VipCellID)
+        tableView.register(HM_VipCell.self, forCellReuseIdentifier: HM_VipCellID)
         tableView.register(HM_VipBannerCell.self , forCellReuseIdentifier: HM_VipBannerCellID)
         tableView.register(HM_HomeVipCategoriesCell.self , forCellReuseIdentifier: HM_HomeVipCategoriesCellID)
         tableView.register(HM_HomeVipHotCell.self , forCellReuseIdentifier: HM_HomeVipHotCellID)
@@ -88,12 +88,19 @@ class HM_VipViewController: HM_BasisViewController {
 }
 
 extension HM_VipViewController : UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.categoryList?.count ?? 0
     }
     
-   
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRowsInSection(section: section)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return viewModel.heightForRowAt(indexPath: indexPath)
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
@@ -122,6 +129,30 @@ extension HM_VipViewController : UITableViewDelegate, UITableViewDataSource {
             cell.categoryContentsModel = viewModel.categoryList?[indexPath.section].list?[indexPath.row]
             return cell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return viewModel.heightForHeaderInSection(section: section)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView:HM_VipHeaderView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HM_VipHeaderViewID) as! HM_VipHeaderView
+        headerView.titStr = viewModel.categoryList?[section].title
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return viewModel.heightForFooterInSection(section: section)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = DOWN_COLOR
+        return view
     }
 }
 

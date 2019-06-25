@@ -48,7 +48,11 @@ class HM_RadioSquareResultsCell: UICollectionViewCell {
     
     var radioSquareResultsModel : [HM_RadioSquareResultsModel]? {
         didSet {
-            guard let model = radioSquareResultsModel else {return}
+            guard let model = radioSquareResultsModel else {
+                print("model 数据为nil")
+                return
+
+            }
             self.radioSquareResults = model
             self.collectionView.reloadData()
         }

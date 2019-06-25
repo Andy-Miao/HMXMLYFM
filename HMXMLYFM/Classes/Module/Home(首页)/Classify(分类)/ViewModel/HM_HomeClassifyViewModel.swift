@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import HandyJSON
+import SwiftMessages
 
 class HM_HomeClassifyViewModel: NSObject {
 
@@ -28,6 +29,21 @@ extension HM_HomeClassifyViewModel {
             if  case let .success(response) = result {
                 // 解析数据
                 let data = try? response.mapJSON()
+                guard (data != nil) else {
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.2, execute: {
+                        let warning = MessageView.viewFromNib(layout: .cardView)
+                        warning.configureDropShadow()
+                        
+                        let iconText = ["🤔", "😳", "🙄", "😶"].sm_random()!
+                        warning.configureContent(title: "", body: "亲，系统出错啦，等等再试好不啦？", iconText: iconText)
+                        warning.button?.isHidden = true
+                        var warningConfig = SwiftMessages.defaultConfig
+                        warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
+                        SwiftMessages.show(config: warningConfig, view: warning)
+                    })
+                    self.updataBlock?()
+                    return;
+                }
                 let json = JSON(data!)
                 // 从字符串转换为对象实例
                 if let mappedObject = JSONDeserializer<HM_HomeClassifyModel>.deserializeFrom(json: json.description) {

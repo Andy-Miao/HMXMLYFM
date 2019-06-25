@@ -1,20 +1,21 @@
 //
-//  HM_RadioSquareCell.swift
+//  HM_LiveHeaderGridCell.swift
 //  HMXMLYFM
 //
-//  Created by humiao on 2019/6/18.
+//  Created by humiao on 2019/6/25.
 //  Copyright © 2019 humiao. All rights reserved.
 //
 
 import UIKit
 
-class HM_RadioSquareCell: UICollectionViewCell {
-    private lazy var imageView : UIImageView = {
+class HM_LiveHeaderGridCell: UICollectionViewCell {
+    
+    private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         return imageView
     }()
     
-    private lazy var titleLabel : UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = NSTextAlignment.center
@@ -25,29 +26,37 @@ class HM_RadioSquareCell: UICollectionViewCell {
         super.init(frame: frame)
         self.addSubview(self.imageView)
         self.imageView.snp.makeConstraints { (make) in
-            make.height.width.equalTo(40)
+            make.height.width.equalTo(45)
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(10)
         }
         
         self.addSubview(self.titleLabel)
         self.titleLabel.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview()
-            make.top.equalTo(self.imageView.snp.bottom).offset(10)
+            make.right.left.equalToSuperview()
+            make.top.equalTo(self.imageView.snp.bottom)
             make.height.equalTo(20)
         }
     }
     
-    var radioSquareModel: HM_RadioSquareResultsModel? {
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    var imageUrl:String? {
         didSet {
-            guard let model = radioSquareModel else {return}
-            print("HM_RadioSquareCell: \(String(describing: model.icon)) 标题: \(String(describing: model.title))")
-            self.imageView.kf.setImage(with: URL(string: model.icon!))
-            self.titleLabel.text = model.title
+            guard let url = imageUrl  else {
+                return
+            }
+            self.imageView.kf.setImage(with: URL(string: url))
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    var titleString: String? {
+        didSet {
+            self.titleLabel.text = titleString
+        }
     }
+    
+    
 }

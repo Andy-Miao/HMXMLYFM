@@ -24,6 +24,9 @@ target 'HMXMLYFM' do
     pod 'Moya'
     pod 'HandyJSON', '~> 5.0.0-beta.1'
 
+    #滚动页
+    pod 'LTScrollView'
+    
   target 'HMXMLYFMTests' do
     inherit! :search_paths
     # Pods for testing

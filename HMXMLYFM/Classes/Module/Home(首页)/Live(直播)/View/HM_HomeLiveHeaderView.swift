@@ -36,6 +36,9 @@ class HM_HomeLiveHeaderView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        self.backgroundColor = .white
+        
         let num = ["热门","情感","有声","新秀","二次元"]
         let margin:CGFloat = 50
         for index in 0..<num.count {

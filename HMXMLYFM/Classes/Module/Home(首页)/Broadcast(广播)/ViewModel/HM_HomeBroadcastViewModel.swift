@@ -15,7 +15,6 @@ class HM_HomeBroadcastViewModel: NSObject {
     var isUnfold: Bool = false
     /// 一下三个model是控制展开收起时电台数据显示
     let bottomModel = HM_RadiosCategoriesModel(id: 10000, name: "arrows_bottom.png")
-    
     let topModel = HM_RadiosCategoriesModel(id: 10000, name: "arrows_top.png")
     let coverModel = HM_RadiosCategoriesModel(id: 10000, name: " ")
     
@@ -27,8 +26,8 @@ class HM_HomeBroadcastViewModel: NSObject {
     var topRadios: [HM_TopRadiosModel]?
     
     // -  - 数据源更新
-    typealias LBFMAddDataBlock = () ->Void
-    var updataBlock:LBFMAddDataBlock?
+    typealias HM_AddDataBlock = () ->Void
+    var updataBlock:HM_AddDataBlock?
 }
 
 extension HM_HomeBroadcastViewModel {
@@ -46,6 +45,8 @@ extension HM_HomeBroadcastViewModel {
                     self.topRadios = mappedObject.data?.topRadios
                     self.categories?.insert(self.bottomModel, at: 7)
                     self.categories?.append(self.topModel)
+                    
+                    print("广播：\(mappedObject)")
                     self.updataBlock?()
                 }
             }

@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 import HandyJSON
-
+import SwiftMessages
 class HM_VipViewModel: NSObject {
 
     /// 定义model
@@ -33,6 +33,21 @@ extension HM_VipViewModel {
             if case let .success(response) = result {
                 // 解析数据
                 let data = try? response.mapJSON()
+                guard (data != nil) else {
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.2, execute: {
+                        let warning = MessageView.viewFromNib(layout: .cardView)
+                        warning.configureDropShadow()
+                        
+                        let iconText = ["🤔", "😳", "🙄", "😶"].sm_random()!
+                        warning.configureContent(title: "", body: "亲，系统出错啦，等等再试好不啦？", iconText: iconText)
+                        warning.button?.isHidden = true
+                        var warningConfig = SwiftMessages.defaultConfig
+                        warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
+                        SwiftMessages.show(config: warningConfig, view: warning)
+                    })
+                    self.updataBlock?()
+                    return;
+                }
                 let json = JSON(data!)
                 if let mappedObject = JSONDeserializer<HM_VipModel>.deserializeFrom(json: json.description) {
                     
@@ -44,7 +59,6 @@ extension HM_VipViewModel {
                 if let categoryBtn = JSONDeserializer<HM_CategoryBtnModel>.deserializeModelArrayFrom(json: json["categoryContents"]["list"][0]["list"].description) {
                     self.categoryBtnList = categoryBtn as?[HM_CategoryBtnModel]
                 }
-                
                 self.updataBlock?()
             }
         }
@@ -58,7 +72,6 @@ extension HM_VipViewModel {
     func numberOfRowsInSection(section: NSInteger) -> NSInteger {
         switch section {
         case HM_HomeVipSectionVip:
-            return 1
              return self.categoryList?[section].list?.count ?? 0
         default:
             return 1

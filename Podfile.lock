@@ -5,6 +5,7 @@ PODS:
   - FSPagerView (0.8.2)
   - HandyJSON (5.0.0-beta.1)
   - Kingfisher (5.4.0)
+  - LTScrollView (0.2.1)
   - MJRefresh (3.2.0)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - FSPagerView
   - HandyJSON (~> 5.0.0-beta.1)
   - Kingfisher
+  - LTScrollView
   - MJRefresh
   - Moya
   - SnapKit
@@ -38,6 +40,7 @@ SPEC REPOS:
     - FSPagerView
     - HandyJSON
     - Kingfisher
+    - LTScrollView
     - MJRefresh
     - Moya
     - Result
@@ -52,6 +55,7 @@ SPEC CHECKSUMS:
   FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
   HandyJSON: 582477127ab3ab65bd2e471815f1a7b846856978
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
+  LTScrollView: 93fff4aed9f9545f541a99b320b27808f5307c12
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
@@ -59,6 +63,6 @@ SPEC CHECKSUMS:
   SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: fd8634f66d6c41a4b90bcb6192cbcf9dbaa2d140
+PODFILE CHECKSUM: 121db48a3e8e2857f344ed6009a8c834e2963e9a
 
 COCOAPODS: 1.5.3

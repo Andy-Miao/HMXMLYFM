@@ -17,7 +17,7 @@ class HM_BroadcastViewController: HM_BasisViewController {
 
     private let HM_RadioHeaderViewID = "HM_RadioHeaderView"
     private let HM_RadioFooterViewID = "HM_RadioFooterView"
-    private let HM_RadiosCellID = "HM_RadiosCell"
+    private let HM_RadiosCellID         = "HM_RadiosCell"
     private let HM_RadioCategoriesCellID = "HM_RadioCategoriesCell"
     private let HM_RadioSquareResultsCellID   = "HM_RadioSquareResultsCell"
     
@@ -175,10 +175,10 @@ extension HM_BroadcastViewController: UICollectionViewDelegate, UICollectionView
             }else {
                 let footerView :HM_RadioFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: HM_RadioFooterViewID, for: indexPath) as! HM_RadioFooterView
                 return footerView
-                
+
             }
         }
-        
+    
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
             return viewModel.referenceSizeForFooterInSection(section: section)
         }
