@@ -47,7 +47,7 @@ class HM_ListenHeaderView: UIView {
             titleLabel.snp.makeConstraints { (make) in
                 make.centerX.equalTo(button)
                 make.width.equalTo(margin+20)
-                make.top.equalTo(margin+10+25)
+                make.top.equalTo(margin+10)
             }
             
             let numLabel = UILabel()

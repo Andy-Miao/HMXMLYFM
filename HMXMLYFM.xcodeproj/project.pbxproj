@@ -43,6 +43,27 @@
 		AD4ED9E122C256CD003020A1 /* HM_CVLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4ED9E022C256CD003020A1 /* HM_CVLayerView.swift */; };
 		AD4ED9E322C25739003020A1 /* HM_VipAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4ED9E222C25739003020A1 /* HM_VipAnimationView.swift */; };
 		AD4ED9E522C258AB003020A1 /* HM_MineMakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4ED9E422C258AB003020A1 /* HM_MineMakeCell.swift */; };
+		AD4ED9EB22C39556003020A1 /* HM_ListenSubscibeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4ED9EA22C39556003020A1 /* HM_ListenSubscibeController.swift */; };
+		AD4ED9ED22C39572003020A1 /* HM_ListenRecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4ED9EC22C39572003020A1 /* HM_ListenRecommendController.swift */; };
+		AD4ED9EF22C39585003020A1 /* HM_ListenChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4ED9EE22C39585003020A1 /* HM_ListenChannelController.swift */; };
+		AD5F075D22C39DFE008940BB /* HM_ListenSubscibeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F075C22C39DFE008940BB /* HM_ListenSubscibeViewModel.swift */; };
+		AD5F075F22C39E12008940BB /* HM_ListenSubscibeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F075E22C39E12008940BB /* HM_ListenSubscibeCell.swift */; };
+		AD5F076122C39E23008940BB /* HM_ListenFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F076022C39E23008940BB /* HM_ListenFooterView.swift */; };
+		AD5F076B22C3A8B4008940BB /* HM_ListenRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F076A22C3A8B4008940BB /* HM_ListenRecommendViewModel.swift */; };
+		AD5F076D22C3A8C8008940BB /* HM_ListenRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F076C22C3A8C8008940BB /* HM_ListenRecommendCell.swift */; };
+		AD5F077222C3ABBA008940BB /* HM_ListenMoreChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F077122C3ABBA008940BB /* HM_ListenMoreChannelController.swift */; };
+		AD5F077422C3ABED008940BB /* HM_ListenChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F077322C3ABED008940BB /* HM_ListenChannelViewModel.swift */; };
+		AD5F077622C3AC07008940BB /* HM_ListenChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F077522C3AC07008940BB /* HM_ListenChannelCell.swift */; };
+		AD5F077822C3AC1A008940BB /* HM_OneKeyListenLTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F077722C3AC1A008940BB /* HM_OneKeyListenLTCell.swift */; };
+		AD5F078022C3B105008940BB /* FindDud.json in Resources */ = {isa = PBXBuildFile; fileRef = AD5F077D22C3B105008940BB /* FindDud.json */; };
+		AD5F078122C3B105008940BB /* FindAttention.json in Resources */ = {isa = PBXBuildFile; fileRef = AD5F077E22C3B105008940BB /* FindAttention.json */; };
+		AD5F078222C3B105008940BB /* FindRecommend.json in Resources */ = {isa = PBXBuildFile; fileRef = AD5F077F22C3B105008940BB /* FindRecommend.json */; };
+		AD5F078422C3B12B008940BB /* HM_FindModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F078322C3B12B008940BB /* HM_FindModel.swift */; };
+		AD5F078622C3B1B7008940BB /* HM_FindHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F078522C3B1B7008940BB /* HM_FindHeaderView.swift */; };
+		AD5F078822C3B347008940BB /* HM_FindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F078722C3B347008940BB /* HM_FindCell.swift */; };
+		AD5F078E22C3B425008940BB /* HM_FindDudController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F078D22C3B425008940BB /* HM_FindDudController.swift */; };
+		AD5F079022C3B43D008940BB /* HM_FindRecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F078F22C3B43D008940BB /* HM_FindRecommendController.swift */; };
+		AD5F079222C3B44F008940BB /* HM_FindAttentionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F079122C3B44F008940BB /* HM_FindAttentionController.swift */; };
 		AD6130CC228538020091C020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6130CB228538020091C020 /* AppDelegate.swift */; };
 		AD6130D1228538020091C020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6130CF228538020091C020 /* Main.storyboard */; };
 		AD6130D3228538020091C020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6130D2228538020091C020 /* Assets.xcassets */; };
@@ -172,6 +193,27 @@
 		AD4ED9E022C256CD003020A1 /* HM_CVLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_CVLayerView.swift; sourceTree = "<group>"; };
 		AD4ED9E222C25739003020A1 /* HM_VipAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_VipAnimationView.swift; sourceTree = "<group>"; };
 		AD4ED9E422C258AB003020A1 /* HM_MineMakeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_MineMakeCell.swift; sourceTree = "<group>"; };
+		AD4ED9EA22C39556003020A1 /* HM_ListenSubscibeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_ListenSubscibeController.swift; sourceTree = "<group>"; };
+		AD4ED9EC22C39572003020A1 /* HM_ListenRecommendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_ListenRecommendController.swift; sourceTree = "<group>"; };
+		AD4ED9EE22C39585003020A1 /* HM_ListenChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_ListenChannelController.swift; sourceTree = "<group>"; };
+		AD5F075C22C39DFE008940BB /* HM_ListenSubscibeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_ListenSubscibeViewModel.swift; sourceTree = "<group>"; };
+		AD5F075E22C39E12008940BB /* HM_ListenSubscibeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_ListenSubscibeCell.swift; sourceTree = "<group>"; };
+		AD5F076022C39E23008940BB /* HM_ListenFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_ListenFooterView.swift; sourceTree = "<group>"; };
+		AD5F076A22C3A8B4008940BB /* HM_ListenRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_ListenRecommendViewModel.swift; sourceTree = "<group>"; };
+		AD5F076C22C3A8C8008940BB /* HM_ListenRecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_ListenRecommendCell.swift; sourceTree = "<group>"; };
+		AD5F077122C3ABBA008940BB /* HM_ListenMoreChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_ListenMoreChannelController.swift; sourceTree = "<group>"; };
+		AD5F077322C3ABED008940BB /* HM_ListenChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_ListenChannelViewModel.swift; sourceTree = "<group>"; };
+		AD5F077522C3AC07008940BB /* HM_ListenChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_ListenChannelCell.swift; sourceTree = "<group>"; };
+		AD5F077722C3AC1A008940BB /* HM_OneKeyListenLTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_OneKeyListenLTCell.swift; sourceTree = "<group>"; };
+		AD5F077D22C3B105008940BB /* FindDud.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FindDud.json; sourceTree = "<group>"; };
+		AD5F077E22C3B105008940BB /* FindAttention.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FindAttention.json; sourceTree = "<group>"; };
+		AD5F077F22C3B105008940BB /* FindRecommend.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FindRecommend.json; sourceTree = "<group>"; };
+		AD5F078322C3B12B008940BB /* HM_FindModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindModel.swift; sourceTree = "<group>"; };
+		AD5F078522C3B1B7008940BB /* HM_FindHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindHeaderView.swift; sourceTree = "<group>"; };
+		AD5F078722C3B347008940BB /* HM_FindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindCell.swift; sourceTree = "<group>"; };
+		AD5F078D22C3B425008940BB /* HM_FindDudController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindDudController.swift; sourceTree = "<group>"; };
+		AD5F078F22C3B43D008940BB /* HM_FindRecommendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindRecommendController.swift; sourceTree = "<group>"; };
+		AD5F079122C3B44F008940BB /* HM_FindAttentionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindAttentionController.swift; sourceTree = "<group>"; };
 		AD6130C8228538020091C020 /* HMXMLYFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMXMLYFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6130CB228538020091C020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6130D0228538020091C020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -491,6 +533,170 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD4ED9E622C39481003020A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD4ED9E922C394E8003020A1 /* ListenChannel(一键听) */,
+				AD4ED9E822C394CC003020A1 /* ListenRecommend(听推荐) */,
+				AD4ED9E722C394A1003020A1 /* ListenSubscibe(听订阅) */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AD4ED9E722C394A1003020A1 /* ListenSubscibe(听订阅) */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F075B22C39DD0008940BB /* View */,
+				AD5F075A22C39DC6008940BB /* ViewModel */,
+				AD4ED9EA22C39556003020A1 /* HM_ListenSubscibeController.swift */,
+			);
+			path = "ListenSubscibe(听订阅)";
+			sourceTree = "<group>";
+		};
+		AD4ED9E822C394CC003020A1 /* ListenRecommend(听推荐) */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F076922C3A892008940BB /* View */,
+				AD5F076822C3A885008940BB /* ViewModel */,
+				AD4ED9EC22C39572003020A1 /* HM_ListenRecommendController.swift */,
+			);
+			path = "ListenRecommend(听推荐)";
+			sourceTree = "<group>";
+		};
+		AD4ED9E922C394E8003020A1 /* ListenChannel(一键听) */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F077022C3AB7A008940BB /* MoreChannel(更多) */,
+				AD5F076F22C3AB59008940BB /* ViewModel */,
+				AD5F076E22C3AB4C008940BB /* View */,
+				AD4ED9EE22C39585003020A1 /* HM_ListenChannelController.swift */,
+			);
+			path = "ListenChannel(一键听)";
+			sourceTree = "<group>";
+		};
+		AD5F075A22C39DC6008940BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F075C22C39DFE008940BB /* HM_ListenSubscibeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD5F075B22C39DD0008940BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F075E22C39E12008940BB /* HM_ListenSubscibeCell.swift */,
+				AD5F076022C39E23008940BB /* HM_ListenFooterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD5F076822C3A885008940BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F076A22C3A8B4008940BB /* HM_ListenRecommendViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD5F076922C3A892008940BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F076C22C3A8C8008940BB /* HM_ListenRecommendCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD5F076E22C3AB4C008940BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F077522C3AC07008940BB /* HM_ListenChannelCell.swift */,
+				AD5F077722C3AC1A008940BB /* HM_OneKeyListenLTCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD5F076F22C3AB59008940BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F077322C3ABED008940BB /* HM_ListenChannelViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD5F077022C3AB7A008940BB /* MoreChannel(更多) */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F077122C3ABBA008940BB /* HM_ListenMoreChannelController.swift */,
+			);
+			path = "MoreChannel(更多)";
+			sourceTree = "<group>";
+		};
+		AD5F077922C3B0CB008940BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F078522C3B1B7008940BB /* HM_FindHeaderView.swift */,
+				AD5F078722C3B347008940BB /* HM_FindCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD5F077A22C3B0D8008940BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD5F077B22C3B0E3008940BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F078322C3B12B008940BB /* HM_FindModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD5F077C22C3B0EB008940BB /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AD5F078922C3B3A3008940BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F078C22C3B401008940BB /* FindDud(趣配音) */,
+				AD5F078B22C3B3E7008940BB /* FindRecommend(推荐动态) */,
+				AD5F078A22C3B3BF008940BB /* FindAttention(关注动态) */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AD5F078A22C3B3BF008940BB /* FindAttention(关注动态) */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F079122C3B44F008940BB /* HM_FindAttentionController.swift */,
+			);
+			path = "FindAttention(关注动态)";
+			sourceTree = "<group>";
+		};
+		AD5F078B22C3B3E7008940BB /* FindRecommend(推荐动态) */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F078F22C3B43D008940BB /* HM_FindRecommendController.swift */,
+			);
+			path = "FindRecommend(推荐动态)";
+			sourceTree = "<group>";
+		};
+		AD5F078C22C3B401008940BB /* FindDud(趣配音) */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F078D22C3B425008940BB /* HM_FindDudController.swift */,
+			);
+			path = "FindDud(趣配音)";
 			sourceTree = "<group>";
 		};
 		AD6130BF228538010091C020 = {
@@ -853,6 +1059,7 @@
 		ADCE5CA2228ADA3100A1410D /* Listen(我听) */ = {
 			isa = PBXGroup;
 			children = (
+				AD4ED9E622C39481003020A1 /* Controller */,
 				AD4ED9C122C24A4F003020A1 /* View */,
 				AD4ED9C022C24A2A003020A1 /* ViewModel */,
 				AD4ED9BF22C249E8003020A1 /* API */,
@@ -873,6 +1080,14 @@
 		ADCE5CA4228ADA8400A1410D /* Find(发现) */ = {
 			isa = PBXGroup;
 			children = (
+				AD5F078922C3B3A3008940BB /* Controller */,
+				AD5F077C22C3B0EB008940BB /* API */,
+				AD5F077E22C3B105008940BB /* FindAttention.json */,
+				AD5F077D22C3B105008940BB /* FindDud.json */,
+				AD5F077F22C3B105008940BB /* FindRecommend.json */,
+				AD5F077B22C3B0E3008940BB /* Model */,
+				AD5F077A22C3B0D8008940BB /* ViewModel */,
+				AD5F077922C3B0CB008940BB /* View */,
 				ADCE5CAC228ADC9B00A1410D /* HM_FindViewController.swift */,
 			);
 			path = "Find(发现)";
@@ -1146,8 +1361,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD4ED9CD22C253F7003020A1 /* listenSubscibe.json in Resources */,
+				AD5F078222C3B105008940BB /* FindRecommend.json in Resources */,
+				AD5F078122C3B105008940BB /* FindAttention.json in Resources */,
 				AD6130D6228538020091C020 /* LaunchScreen.storyboard in Resources */,
 				AD4ED9CC22C253F7003020A1 /* listenRecommend.json in Resources */,
+				AD5F078022C3B105008940BB /* FindDud.json in Resources */,
 				AD4ED9CB22C253F7003020A1 /* listenMoreChannel.json in Resources */,
 				AD6130D3228538020091C020 /* Assets.xcassets in Resources */,
 				AD6130D1228538020091C020 /* Main.storyboard in Resources */,
@@ -1183,12 +1401,15 @@
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/JXMarqueeView/JXMarqueeView.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/LTScrollView/LTScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/StreamingKit/StreamingKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -1199,12 +1420,15 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXMarqueeView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StreamingKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -1285,6 +1509,7 @@
 				AD4ED9C722C25130003020A1 /* HM_ListenAPI.swift in Sources */,
 				AD29C75122BD1880001BE326 /* HM_VipFooterView.swift in Sources */,
 				AD6C3B81228DA08D009BDEC3 /* HM_RecommendHeaderCell.swift in Sources */,
+				AD5F078422C3B12B008940BB /* HM_FindModel.swift in Sources */,
 				ADE09F5422963B45009BEA1F /* HM_ForYouCell.swift in Sources */,
 				AD6C3B71228D88F1009BDEC3 /* HM_RecommendFooterView.swift in Sources */,
 				AD29C74D22BD0747001BE326 /* HM_VipCategoryCell.swift in Sources */,
@@ -1302,10 +1527,15 @@
 				AD6C3B7F228D9C8E009BDEC3 /* HM_RecommendForYouCell.swift in Sources */,
 				AD4ED9A322C1C0B2003020A1 /* HM_HomeLiveGridCell.swift in Sources */,
 				ADF81A1B22B8DA6900222DB1 /* HM_HomeBroadcastModel.swift in Sources */,
+				AD5F076D22C3A8C8008940BB /* HM_ListenRecommendCell.swift in Sources */,
 				AD6C3B66228D3CDF009BDEC3 /* HM_VipViewController.swift in Sources */,
 				ADAE9936229CF6160075819F /* HM_RecommendOneKeyListenCell.swift in Sources */,
+				AD5F075F22C39E12008940BB /* HM_ListenSubscibeCell.swift in Sources */,
+				AD5F078622C3B1B7008940BB /* HM_FindHeaderView.swift in Sources */,
 				ADAE993A22A4C5680075819F /* HM_OneKeyListenCell.swift in Sources */,
 				ADCE5CB8228AE02500A1410D /* SYC_Tools.swift in Sources */,
+				AD5F077422C3ABED008940BB /* HM_ListenChannelViewModel.swift in Sources */,
+				AD5F076122C39E23008940BB /* HM_ListenFooterView.swift in Sources */,
 				AD4ED9DF22C256A0003020A1 /* HM_MineModel.swift in Sources */,
 				AD4ED9A522C1CA73003020A1 /* HM_HomeLiveRankCell.swift in Sources */,
 				AD4ED9E322C25739003020A1 /* HM_VipAnimationView.swift in Sources */,
@@ -1315,6 +1545,7 @@
 				AD29C74B22BD072E001BE326 /* HM_HomeVipCategoriesCell.swift in Sources */,
 				AD67DA68228C0202009CF91D /* WRCycleCell.swift in Sources */,
 				ADF81A1322B8C20400222DB1 /* HM_RadioCategoriesCell.swift in Sources */,
+				AD5F078E22C3B425008940BB /* HM_FindDudController.swift in Sources */,
 				AD69266022952BA700B1AFE2 /* HM_GuessYouLikeCell.swift in Sources */,
 				AD4ED9AB22C1DBDE003020A1 /* HM_HomeLiveViewModel.swift in Sources */,
 				AD4ED9E122C256CD003020A1 /* HM_CVLayerView.swift in Sources */,
@@ -1322,21 +1553,25 @@
 				AD4ED98022C06EC9003020A1 /* HM_HomeVipEnjoyCell.swift in Sources */,
 				AD6C3B7A228D91D5009BDEC3 /* HM_RecommendViewModel.swift in Sources */,
 				AD29C74F22BD17E6001BE326 /* HM_VipHeaderView.swift in Sources */,
+				AD4ED9EF22C39585003020A1 /* HM_ListenChannelController.swift in Sources */,
 				ADCE5CBF228AE21700A1410D /* HM_BounceContentView.swift in Sources */,
 				AD4ED97E22C06A82003020A1 /* HM_VipHotCell.swift in Sources */,
 				AD29C74122BCCB00001BE326 /* HM_VipViewModel.swift in Sources */,
+				AD5F075D22C39DFE008940BB /* HM_ListenSubscibeViewModel.swift in Sources */,
 				ADF81A2122B8E29000222DB1 /* HM_HomeBroadcastViewModel.swift in Sources */,
 				ADAE994F22A609950075819F /* HM_HomeClassifyCell.swift in Sources */,
 				ADAE9934229CF5FD0075819F /* HM_RecommendHomeLiveCell.swift in Sources */,
 				AD67DA65228C0202009CF91D /* WRCustomNavigationBar.swift in Sources */,
 				ADF81A0A22B8883D00222DB1 /* HM_HomeClassifyAPI.swift in Sources */,
 				AD4ED9C322C24A7D003020A1 /* HM_ListenHeaderView.swift in Sources */,
+				AD5F077222C3ABBA008940BB /* HM_ListenMoreChannelController.swift in Sources */,
 				AD4ED98222C0722C003020A1 /* HM_VipEnjoyCell.swift in Sources */,
 				ADF81A3222B8EF4600222DB1 /* HM_RadioSquareCell.swift in Sources */,
 				AD29C74922BD00A6001BE326 /* HM_VipBannerCell.swift in Sources */,
 				ADCE5CB5228ADF7200A1410D /* HM_BasisContentView.swift in Sources */,
 				ADF81A0822B880D500222DB1 /* HM_HomeClassifyModel.swift in Sources */,
 				AD6C3B6F228D88D2009BDEC3 /* HM_RecommendHeaderView.swift in Sources */,
+				AD5F077622C3AC07008940BB /* HM_ListenChannelCell.swift in Sources */,
 				AD6C3B83228DA121009BDEC3 /* HM_RecommendGridCell.swift in Sources */,
 				AD4ED9A722C1CABC003020A1 /* HM_LiveRankCell.swift in Sources */,
 				ADCE5CAF228ADCAF00A1410D /* HM_PlayViewController.swift in Sources */,
@@ -1351,13 +1586,20 @@
 				AD4ED99D22C085FA003020A1 /* HM_HomeLiveModel.swift in Sources */,
 				ADF81A1E22B8DD0A00222DB1 /* HM_HomeBroadcastAPI.swift in Sources */,
 				AD6C3B63228D3B36009BDEC3 /* HM_ClassifyViewController.swift in Sources */,
+				AD5F079222C3B44F008940BB /* HM_FindAttentionController.swift in Sources */,
 				AD67DA64228C0202009CF91D /* WRNavigationBar.swift in Sources */,
+				AD5F076B22C3A8B4008940BB /* HM_ListenRecommendViewModel.swift in Sources */,
 				AD67DA5C228BE123009CF91D /* HM_Header.swift in Sources */,
 				AD4ED9DE22C256A0003020A1 /* HM_MineHeaderView.swift in Sources */,
+				AD5F078822C3B347008940BB /* HM_FindCell.swift in Sources */,
+				AD5F079022C3B43D008940BB /* HM_FindRecommendController.swift in Sources */,
 				AD4ED97C22C068C1003020A1 /* HM_HomeVipHotCell.swift in Sources */,
 				ADF81A1822B8C26600222DB1 /* HM_RadioFooterView.swift in Sources */,
 				ADAE995122A60A440075819F /* HM_HomeClassifyHeaderView.swift in Sources */,
+				AD5F077822C3AC1A008940BB /* HM_OneKeyListenLTCell.swift in Sources */,
 				AD4ED99F22C0869A003020A1 /* HM_HomeLiveBannerCell.swift in Sources */,
+				AD4ED9ED22C39572003020A1 /* HM_ListenRecommendController.swift in Sources */,
+				AD4ED9EB22C39556003020A1 /* HM_ListenSubscibeController.swift in Sources */,
 				AD6C3B7D228D9431009BDEC3 /* HM_RecommendAPI.swift in Sources */,
 				AD6C3B85228DA14D009BDEC3 /* HM_RecommendNewsCell.swift in Sources */,
 				AD67DA67228C0202009CF91D /* WRCycleScrollView.swift in Sources */,
@@ -1542,6 +1784,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3599FDCDB0BCEDFBFC602BF6 /* Pods-HMXMLYFM.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8MN64P49U6;
@@ -1562,6 +1805,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 994B44F4B537C14FFAD61C3D /* Pods-HMXMLYFM.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8MN64P49U6;

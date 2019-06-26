@@ -4,6 +4,7 @@ PODS:
   - ESTabBarController-swift (2.7)
   - FSPagerView (0.8.2)
   - HandyJSON (5.0.0-beta.1)
+  - JXMarqueeView (0.0.7)
   - Kingfisher (5.4.0)
   - LTScrollView (0.2.1)
   - MJRefresh (3.2.0)
@@ -14,6 +15,8 @@ PODS:
     - Result (~> 4.1)
   - Result (4.1.0)
   - SnapKit (5.0.0)
+  - StreamingKit (0.1.30)
+  - SVProgressHUD (2.2.5)
   - SwiftMessages (4.1.4):
     - SwiftMessages/App (= 4.1.4)
   - SwiftMessages/App (4.1.4)
@@ -24,11 +27,14 @@ DEPENDENCIES:
   - ESTabBarController-swift
   - FSPagerView
   - HandyJSON (~> 5.0.0-beta.1)
+  - JXMarqueeView
   - Kingfisher
   - LTScrollView
   - MJRefresh
   - Moya
   - SnapKit
+  - StreamingKit
+  - SVProgressHUD
   - SwiftMessages (~> 4.1.4)
   - SwiftyJSON
 
@@ -39,12 +45,15 @@ SPEC REPOS:
     - ESTabBarController-swift
     - FSPagerView
     - HandyJSON
+    - JXMarqueeView
     - Kingfisher
     - LTScrollView
     - MJRefresh
     - Moya
     - Result
     - SnapKit
+    - StreamingKit
+    - SVProgressHUD
     - SwiftMessages
     - SwiftyJSON
 
@@ -54,15 +63,18 @@ SPEC CHECKSUMS:
   ESTabBarController-swift: 4fb52ad03d94d0717ef97bc9eb09a5abfdded0a2
   FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
   HandyJSON: 582477127ab3ab65bd2e471815f1a7b846856978
+  JXMarqueeView: a318eca76348b1ce8ed3ddc4fc7271ed4262bf30
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
   LTScrollView: 93fff4aed9f9545f541a99b320b27808f5307c12
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  StreamingKit: 70ca8608c206864b4d54a577eacb3c8bf7c72209
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 121db48a3e8e2857f344ed6009a8c834e2963e9a
+PODFILE CHECKSUM: 7e4b6432c39b001b58ef869c56dcf772e556ea78
 
 COCOAPODS: 1.5.3

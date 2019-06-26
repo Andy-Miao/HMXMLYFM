@@ -24,8 +24,14 @@ target 'HMXMLYFM' do
     pod 'Moya'
     pod 'HandyJSON', '~> 5.0.0-beta.1'
 
+    #跑马灯
+    pod 'JXMarqueeView'
     #滚动页
     pod 'LTScrollView'
+    #pod 'YYKit'
+    pod 'SVProgressHUD'
+    #播放网络音频
+    pod 'StreamingKit'
     
   target 'HMXMLYFMTests' do
     inherit! :search_paths

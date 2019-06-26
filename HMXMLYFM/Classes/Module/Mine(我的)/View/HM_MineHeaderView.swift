@@ -37,7 +37,7 @@ class HM_MineHeaderView: UIView {
     // 粉丝
     private lazy var fansLabel:UILabel = {
         let label = UILabel()
-        label.text = "粉丝  1000万"
+        label.text = "粉丝  1.87万"
         label.textColor = .gray
         label.font = UIFont.systemFont(ofSize: 15)
         return label
