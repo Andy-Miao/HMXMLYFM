@@ -207,7 +207,18 @@ extension HM_RecommendViewController :  UICollectionViewDelegateFlowLayout, UICo
             headerView.homeRecommendList = viewModel.homeRecommendListModel?[indexPath.section]
             // 分区头右边更多按钮点击跳转
             headerView.headerMoreBtnClick = {[weak self]() in
-                print("头视图被点击了")
+                if moduleType == "guessYouLike"{
+                    let vc = HM_GuessYouLikeMoreController()
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                } else if moduleType == "paidCategory" {
+                    let vc = HM_VipViewController(isRecommendPush:true)
+                    vc.title = "精品"
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                } else if moduleType == "live"{
+                    let vc = HM_LiveViewController()
+                    vc.title = "直播"
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                }
             }
             return headerView
         }else if kind == UICollectionElementKindSectionFooter {
@@ -226,7 +237,29 @@ extension HM_RecommendViewController:HM_RecommendHeaderCellDelegate {
     }
     
     func recommendHeaderBtnClick(categoryId:String,title:String,url:String){
-       
+        if url == ""{
+            if categoryId == "0"{
+                let warning = MessageView.viewFromNib(layout:.cardView)
+                warning.configureTheme(.warning)
+                warning.configureDropShadow()
+                
+                let iconText = ["🤔", "😳", "🙄", "😶"].sm_random()!
+                warning.configureContent(title: "Warning", body: "暂时没有数据!!!", iconText: iconText)
+                warning.button?.isHidden = true
+                var warningConfig = SwiftMessages.defaultConfig
+                 warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
+                 SwiftMessages.show(config: warningConfig, view: warning)
+            } else{
+//                let vc = HM_ClassifySubMenuController(categoryId:Int(categoryId)!)
+//                vc.title = title
+//                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        } else {
+            let vc = HM_WebViewController(url:url)
+            vc.title = title
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
 }
 // - 点击猜你喜欢按钮进入相对应界面

@@ -44,7 +44,7 @@ class HM_FindViewController: HM_BasisViewController {
     
     private lazy var advancedManager: LTAdvancedManager = {
         let statusBarH = UIApplication.shared.statusBarFrame.size.height
-        let advancedManager = LTAdvancedManager(frame: CGRect(x: 0, y: NAVBAR_HEIGHT, width: SCREEN_HEIGHT, height: SCREEN_HEIGHT - NAVBAR_HEIGHT), viewControllers: viewControllers, titles: titles, currentViewController: self, layout: layout, headerViewHandle: {[weak self] in
+        let advancedManager = LTAdvancedManager(frame: CGRect(x: 0, y: NAVBAR_HEIGHT, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - NAVBAR_HEIGHT), viewControllers: viewControllers, titles: titles, currentViewController: self, layout: layout, headerViewHandle: {[weak self] in
             guard let strongSelf = self else { return UIView() }
             let headerView = strongSelf.headerView
             return headerView

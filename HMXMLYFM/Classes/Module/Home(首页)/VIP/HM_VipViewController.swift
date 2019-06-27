@@ -175,7 +175,15 @@ extension HM_VipViewController:HM_VipBannerCellDelegate {
 // - 点击顶部分类按钮 delegate
 extension HM_VipViewController:HM_HomeVipCategoriesCellDelegate{
     func homeVipCategoriesCellItemClick(id: String, url: String,title:String) {
-
+        if url == ""{
+//            let vc = HM_ClassifySubMenuController(categoryId: Int(id)!,isVipPush:true)
+//            vc.title = title
+//            self.navigationController?.pushViewController(vc, animated: true)
+        }else{
+            let vc = HM_WebViewController(url:url)
+            vc.title = title
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 

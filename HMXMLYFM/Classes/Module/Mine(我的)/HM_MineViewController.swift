@@ -88,7 +88,8 @@ class HM_MineViewController: HM_BasisViewController {
     }
     // - 导航栏右边设置点击事件
     @objc func rightBarButtonClick() {
-       
+       let setVC = HM_MineSetController()
+        self.navigationController?.pushViewController(setVC, animated: true)
     }
 }
 

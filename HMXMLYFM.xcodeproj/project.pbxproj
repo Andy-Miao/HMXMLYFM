@@ -64,6 +64,17 @@
 		AD5F078E22C3B425008940BB /* HM_FindDudController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F078D22C3B425008940BB /* HM_FindDudController.swift */; };
 		AD5F079022C3B43D008940BB /* HM_FindRecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F078F22C3B43D008940BB /* HM_FindRecommendController.swift */; };
 		AD5F079222C3B44F008940BB /* HM_FindAttentionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F079122C3B44F008940BB /* HM_FindAttentionController.swift */; };
+		AD5F079622C457A1008940BB /* HM_FindAttentionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F079522C457A1008940BB /* HM_FindAttentionViewModel.swift */; };
+		AD5F079822C45CFD008940BB /* HM_FindAttentionPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F079722C45CFD008940BB /* HM_FindAttentionPicCell.swift */; };
+		AD5F079A22C45D0D008940BB /* HM_FindAttentionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F079922C45D0D008940BB /* HM_FindAttentionCell.swift */; };
+		AD5F079D22C45D8F008940BB /* HM_CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F079C22C45D8F008940BB /* HM_CustomLabel.swift */; };
+		AD5F07A722C46664008940BB /* HM_FindRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F07A622C46664008940BB /* HM_FindRecommendViewModel.swift */; };
+		AD5F07A922C466F5008940BB /* HM_FindRecommendCell:.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F07A822C466F5008940BB /* HM_FindRecommendCell:.swift */; };
+		AD5F07AB22C4677E008940BB /* HM_FindRecommendPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F07AA22C4677E008940BB /* HM_FindRecommendPicCell.swift */; };
+		AD5F07AD22C46D7B008940BB /* HM_FindDudCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F07AC22C46D7B008940BB /* HM_FindDudCell.swift */; };
+		AD5F07B022C46E89008940BB /* HM_MineSetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F07AF22C46E89008940BB /* HM_MineSetController.swift */; };
+		AD5F07EB22C4702C008940BB /* HM_WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F07EA22C4702C008940BB /* HM_WebViewController.swift */; };
+		AD5F07ED22C47053008940BB /* HM_GuessYouLikeMoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F07EC22C47053008940BB /* HM_GuessYouLikeMoreController.swift */; };
 		AD6130CC228538020091C020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6130CB228538020091C020 /* AppDelegate.swift */; };
 		AD6130D1228538020091C020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6130CF228538020091C020 /* Main.storyboard */; };
 		AD6130D3228538020091C020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6130D2228538020091C020 /* Assets.xcassets */; };
@@ -214,6 +225,17 @@
 		AD5F078D22C3B425008940BB /* HM_FindDudController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindDudController.swift; sourceTree = "<group>"; };
 		AD5F078F22C3B43D008940BB /* HM_FindRecommendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindRecommendController.swift; sourceTree = "<group>"; };
 		AD5F079122C3B44F008940BB /* HM_FindAttentionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindAttentionController.swift; sourceTree = "<group>"; };
+		AD5F079522C457A1008940BB /* HM_FindAttentionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindAttentionViewModel.swift; sourceTree = "<group>"; };
+		AD5F079722C45CFD008940BB /* HM_FindAttentionPicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindAttentionPicCell.swift; sourceTree = "<group>"; };
+		AD5F079922C45D0D008940BB /* HM_FindAttentionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindAttentionCell.swift; sourceTree = "<group>"; };
+		AD5F079C22C45D8F008940BB /* HM_CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_CustomLabel.swift; sourceTree = "<group>"; };
+		AD5F07A622C46664008940BB /* HM_FindRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindRecommendViewModel.swift; sourceTree = "<group>"; };
+		AD5F07A822C466F5008940BB /* HM_FindRecommendCell:.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HM_FindRecommendCell:.swift"; sourceTree = "<group>"; };
+		AD5F07AA22C4677E008940BB /* HM_FindRecommendPicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindRecommendPicCell.swift; sourceTree = "<group>"; };
+		AD5F07AC22C46D7B008940BB /* HM_FindDudCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_FindDudCell.swift; sourceTree = "<group>"; };
+		AD5F07AF22C46E89008940BB /* HM_MineSetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_MineSetController.swift; sourceTree = "<group>"; };
+		AD5F07EA22C4702C008940BB /* HM_WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_WebViewController.swift; sourceTree = "<group>"; };
+		AD5F07EC22C47053008940BB /* HM_GuessYouLikeMoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HM_GuessYouLikeMoreController.swift; sourceTree = "<group>"; };
 		AD6130C8228538020091C020 /* HMXMLYFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMXMLYFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6130CB228538020091C020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6130D0228538020091C020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -661,6 +683,9 @@
 		AD5F077C22C3B0EB008940BB /* API */ = {
 			isa = PBXGroup;
 			children = (
+				AD5F077E22C3B105008940BB /* FindAttention.json */,
+				AD5F077D22C3B105008940BB /* FindDud.json */,
+				AD5F077F22C3B105008940BB /* FindRecommend.json */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -678,6 +703,8 @@
 		AD5F078A22C3B3BF008940BB /* FindAttention(关注动态) */ = {
 			isa = PBXGroup;
 			children = (
+				AD5F079422C4577A008940BB /* ViewModel */,
+				AD5F079322C4576B008940BB /* View */,
 				AD5F079122C3B44F008940BB /* HM_FindAttentionController.swift */,
 			);
 			path = "FindAttention(关注动态)";
@@ -686,6 +713,8 @@
 		AD5F078B22C3B3E7008940BB /* FindRecommend(推荐动态) */ = {
 			isa = PBXGroup;
 			children = (
+				AD5F07A522C46635008940BB /* ViewModel */,
+				AD5F07A422C46629008940BB /* View */,
 				AD5F078F22C3B43D008940BB /* HM_FindRecommendController.swift */,
 			);
 			path = "FindRecommend(推荐动态)";
@@ -695,8 +724,68 @@
 			isa = PBXGroup;
 			children = (
 				AD5F078D22C3B425008940BB /* HM_FindDudController.swift */,
+				AD5F07AC22C46D7B008940BB /* HM_FindDudCell.swift */,
 			);
 			path = "FindDud(趣配音)";
+			sourceTree = "<group>";
+		};
+		AD5F079322C4576B008940BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F079722C45CFD008940BB /* HM_FindAttentionPicCell.swift */,
+				AD5F079922C45D0D008940BB /* HM_FindAttentionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD5F079422C4577A008940BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F079522C457A1008940BB /* HM_FindAttentionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD5F079B22C45D76008940BB /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F079C22C45D8F008940BB /* HM_CustomLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		AD5F07A422C46629008940BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F07A822C466F5008940BB /* HM_FindRecommendCell:.swift */,
+				AD5F07AA22C4677E008940BB /* HM_FindRecommendPicCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD5F07A522C46635008940BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F07A622C46664008940BB /* HM_FindRecommendViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD5F07AE22C46E6D008940BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F07AF22C46E89008940BB /* HM_MineSetController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AD5F07E922C47016008940BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F07EA22C4702C008940BB /* HM_WebViewController.swift */,
+				AD5F07EC22C47053008940BB /* HM_GuessYouLikeMoreController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		AD6130BF228538010091C020 = {
@@ -785,6 +874,7 @@
 		AD67DA4E228BDF89009CF91D /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				AD5F079B22C45D76008940BB /* Label */,
 				ADF81A0422B76F2B00222DB1 /* ReplicatorLayer */,
 				AD6C3B72228D8ABC009BDEC3 /* Refresh */,
 				AD67DA5D228C0201009CF91D /* WRNavigationBar */,
@@ -848,6 +938,7 @@
 		AD6C3B5E228D3B0D009BDEC3 /* Recommend(推荐) */ = {
 			isa = PBXGroup;
 			children = (
+				AD5F07E922C47016008940BB /* Controller */,
 				AD6C3B5F228D3B0D009BDEC3 /* HM_RecommendViewController.swift */,
 				AD6C3B7B228D9415009BDEC3 /* API */,
 				AD6C3B78228D91B5009BDEC3 /* ViewModel */,
@@ -1082,9 +1173,6 @@
 			children = (
 				AD5F078922C3B3A3008940BB /* Controller */,
 				AD5F077C22C3B0EB008940BB /* API */,
-				AD5F077E22C3B105008940BB /* FindAttention.json */,
-				AD5F077D22C3B105008940BB /* FindDud.json */,
-				AD5F077F22C3B105008940BB /* FindRecommend.json */,
 				AD5F077B22C3B0E3008940BB /* Model */,
 				AD5F077A22C3B0D8008940BB /* ViewModel */,
 				AD5F077922C3B0CB008940BB /* View */,
@@ -1096,6 +1184,7 @@
 		ADCE5CA5228ADA9700A1410D /* Mine(我的) */ = {
 			isa = PBXGroup;
 			children = (
+				AD5F07AE22C46E6D008940BB /* Controller */,
 				AD4ED9D822C256A0003020A1 /* API */,
 				AD4ED9DB22C256A0003020A1 /* Model */,
 				AD4ED9D922C256A0003020A1 /* View */,
@@ -1511,14 +1600,18 @@
 				AD6C3B81228DA08D009BDEC3 /* HM_RecommendHeaderCell.swift in Sources */,
 				AD5F078422C3B12B008940BB /* HM_FindModel.swift in Sources */,
 				ADE09F5422963B45009BEA1F /* HM_ForYouCell.swift in Sources */,
+				AD5F079A22C45D0D008940BB /* HM_FindAttentionCell.swift in Sources */,
 				AD6C3B71228D88F1009BDEC3 /* HM_RecommendFooterView.swift in Sources */,
 				AD29C74D22BD0747001BE326 /* HM_VipCategoryCell.swift in Sources */,
 				AD4ED99922C084EC003020A1 /* HM_HomeLiveHeaderView.swift in Sources */,
 				ADCE5C9E228AD5EF00A1410D /* MainTabBarController.swift in Sources */,
 				AD29C73F22BCC7A7001BE326 /* HM_VipAPI.swift in Sources */,
+				AD5F079622C457A1008940BB /* HM_FindAttentionViewModel.swift in Sources */,
 				ADAE995322A60A5E0075819F /* HM_HomeClassifyFooterView.swift in Sources */,
 				AD67DA4D228BDEF3009CF91D /* HM_BasisNavigationController.swift in Sources */,
+				AD5F07EB22C4702C008940BB /* HM_WebViewController.swift in Sources */,
 				AD67DA66228C0202009CF91D /* WRProxy.swift in Sources */,
+				AD5F07AB22C4677E008940BB /* HM_FindRecommendPicCell.swift in Sources */,
 				AD4ED99B22C08598003020A1 /* HM_HomeLiveCell.swift in Sources */,
 				AD29C75322BD19FD001BE326 /* HM_VipCell.swift in Sources */,
 				AD6130CC228538020091C020 /* AppDelegate.swift in Sources */,
@@ -1528,18 +1621,21 @@
 				AD4ED9A322C1C0B2003020A1 /* HM_HomeLiveGridCell.swift in Sources */,
 				ADF81A1B22B8DA6900222DB1 /* HM_HomeBroadcastModel.swift in Sources */,
 				AD5F076D22C3A8C8008940BB /* HM_ListenRecommendCell.swift in Sources */,
+				AD5F079822C45CFD008940BB /* HM_FindAttentionPicCell.swift in Sources */,
 				AD6C3B66228D3CDF009BDEC3 /* HM_VipViewController.swift in Sources */,
 				ADAE9936229CF6160075819F /* HM_RecommendOneKeyListenCell.swift in Sources */,
 				AD5F075F22C39E12008940BB /* HM_ListenSubscibeCell.swift in Sources */,
 				AD5F078622C3B1B7008940BB /* HM_FindHeaderView.swift in Sources */,
 				ADAE993A22A4C5680075819F /* HM_OneKeyListenCell.swift in Sources */,
 				ADCE5CB8228AE02500A1410D /* SYC_Tools.swift in Sources */,
+				AD5F07A722C46664008940BB /* HM_FindRecommendViewModel.swift in Sources */,
 				AD5F077422C3ABED008940BB /* HM_ListenChannelViewModel.swift in Sources */,
 				AD5F076122C39E23008940BB /* HM_ListenFooterView.swift in Sources */,
 				AD4ED9DF22C256A0003020A1 /* HM_MineModel.swift in Sources */,
 				AD4ED9A522C1CA73003020A1 /* HM_HomeLiveRankCell.swift in Sources */,
 				AD4ED9E322C25739003020A1 /* HM_VipAnimationView.swift in Sources */,
 				ADCE5CB1228ADCBE00A1410D /* HM_HomeViewController.swift in Sources */,
+				AD5F07B022C46E89008940BB /* HM_MineSetController.swift in Sources */,
 				ADCE5CAB228ADB7C00A1410D /* HM_MineViewController.swift in Sources */,
 				ADE09F592296714F009BEA1F /* HM_HotAudioBookCell.swift in Sources */,
 				AD29C74B22BD072E001BE326 /* HM_HomeVipCategoriesCell.swift in Sources */,
@@ -1569,6 +1665,7 @@
 				ADF81A3222B8EF4600222DB1 /* HM_RadioSquareCell.swift in Sources */,
 				AD29C74922BD00A6001BE326 /* HM_VipBannerCell.swift in Sources */,
 				ADCE5CB5228ADF7200A1410D /* HM_BasisContentView.swift in Sources */,
+				AD5F07ED22C47053008940BB /* HM_GuessYouLikeMoreController.swift in Sources */,
 				ADF81A0822B880D500222DB1 /* HM_HomeClassifyModel.swift in Sources */,
 				AD6C3B6F228D88D2009BDEC3 /* HM_RecommendHeaderView.swift in Sources */,
 				AD5F077622C3AC07008940BB /* HM_ListenChannelCell.swift in Sources */,
@@ -1580,6 +1677,7 @@
 				AD6C3B69228D3CFD009BDEC3 /* HM_LiveViewController.swift in Sources */,
 				AD6C3B6C228D3D16009BDEC3 /* HM_BroadcastViewController.swift in Sources */,
 				ADCE5CAD228ADC9B00A1410D /* HM_FindViewController.swift in Sources */,
+				AD5F07AD22C46D7B008940BB /* HM_FindDudCell.swift in Sources */,
 				AD4ED9E522C258AB003020A1 /* HM_MineMakeCell.swift in Sources */,
 				ADF81A1622B8C24E00222DB1 /* HM_RadioHeaderView.swift in Sources */,
 				ADCE5CA7228ADB3A00A1410D /* HM_BasisViewController.swift in Sources */,
@@ -1603,11 +1701,13 @@
 				AD6C3B7D228D9431009BDEC3 /* HM_RecommendAPI.swift in Sources */,
 				AD6C3B85228DA14D009BDEC3 /* HM_RecommendNewsCell.swift in Sources */,
 				AD67DA67228C0202009CF91D /* WRCycleScrollView.swift in Sources */,
+				AD5F079D22C45D8F008940BB /* HM_CustomLabel.swift in Sources */,
 				ADF81A3622B8EFFE00222DB1 /* HM_RadioSquareResultsCell.swift in Sources */,
 				AD29C73D22BCC4F6001BE326 /* HM_VipModel.swift in Sources */,
 				ADAE9938229CF6290075819F /* HM_RecommendAdvertCell.swift in Sources */,
 				ADE09F5722966E46009BEA1F /* HM_RecommendHotAudioBookCell.swift in Sources */,
 				AD6C3B77228D8E69009BDEC3 /* HM_RecommendModel.swift in Sources */,
+				AD5F07A922C466F5008940BB /* HM_FindRecommendCell:.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
