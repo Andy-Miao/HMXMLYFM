@@ -1,15 +1,14 @@
 //
-//  HM_RecommendLiveCell.swift
+//  HM_ClassifySubModuleType16Cell.swift
 //  HMXMLYFM
 //
-//  Created by humiao on 2019/6/3.
+//  Created by humiao on 2019/6/27.
 //  Copyright © 2019 humiao. All rights reserved.
 //
 
 import UIKit
 
-class HM_RecommendLiveCell: UICollectionViewCell {
-    
+class HM_ClassifySubModuleType16Cell: UICollectionViewCell {
     // 图片
     private var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -39,19 +38,9 @@ class HM_RecommendLiveCell: UICollectionViewCell {
         return label
     }()
     
-    // 播放器动画效果
-    private var replicatorLayer:ReplicatorLayer = {
-        let layer = ReplicatorLayer.init(frame: CGRect(x: 0, y: 0, width: 2, height: 15))
-        return layer
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
     }
     
     func setupView(){
@@ -86,21 +75,11 @@ class HM_RecommendLiveCell: UICollectionViewCell {
             make.height.equalTo(40)
             make.bottom.equalToSuperview()
         }
-        
-        self.imageView.addSubview(self.replicatorLayer)
-        self.replicatorLayer.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(10)
-            make.bottom.equalToSuperview().offset(-10)
-            make.width.equalTo(20)
-            make.height.equalTo(10)
-        }
     }
     
-    var recommendLiveModel: HM_LiveModel? {
-        didSet {
-            guard let model = recommendLiveModel else {
-                return
-            }
+    var recommendliveData:HM_LiveModel? {
+        didSet{
+            guard let model = recommendliveData else { return }
             if (model.coverMiddle != nil) {
                 self.imageView.kf.setImage(with: URL(string: model.coverMiddle!))
             }
@@ -110,14 +89,16 @@ class HM_RecommendLiveCell: UICollectionViewCell {
         }
     }
     
-    var liveModel: HM_LivesModel? {
+    var classifyVerticalModel: HM_ClassifyVerticalModel? {
         didSet {
-            guard let model = liveModel else {
-                return;
-            }
-            self.titleLabel.text = model.nickname
-            self.subLabel.text = model.name
-            self.categoryL.text = model.categoryName
+            guard let model = classifyVerticalModel else {return}
+            self.imageView.kf.setImage(with: URL(string: model.coverMiddle!))
+            self.titleLabel.text = model.name
+            self.subLabel.text = model.nickname
         }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 }
