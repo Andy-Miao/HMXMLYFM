@@ -60,7 +60,7 @@ class HM_RecommendViewController: HM_BasisViewController {
          // 推荐直播
         collection.register(HM_RecommendHomeLiveCell.self, forCellWithReuseIdentifier: HM_RecommendHomeLiveCellID)
         
-        collection.uHead = URefreshHeader{ [weak self] in self?.setupLoadData() }
+        collection.uHead = URefreshHeader{ [weak self] in self?.loadData() }
         return collection
     }()
     
@@ -73,9 +73,9 @@ class HM_RecommendViewController: HM_BasisViewController {
 
         setupView()
        
-        setupLoadData()
+        loadData()
         
-        setupLoadAdvertData()
+        loadAdvertData()
         // Do any additional setup after loading the view.
     }
     // 创建视图
@@ -88,7 +88,7 @@ class HM_RecommendViewController: HM_BasisViewController {
         self.collectionView.uHead.beginRefreshing()
     }
     // 加载数据
-    func setupLoadData() {
+    func loadData() {
         viewModel.updateDataBlock = { [unowned self] in
             self.collectionView.uHead.endRefreshing()
             self.collectionView.reloadData()
@@ -96,7 +96,7 @@ class HM_RecommendViewController: HM_BasisViewController {
         viewModel.refreshDataSource()
     }
     // 加载广告数据
-    func setupLoadAdvertData() {
+    func loadAdvertData() {
         HM_RecommendProvider.request(.recommendAdList) { (result) in
             if  case let .success(response) = result {
                 // 解析数据
@@ -218,6 +218,13 @@ extension HM_RecommendViewController :  UICollectionViewDelegateFlowLayout, UICo
                     let vc = HM_LiveViewController()
                     vc.title = "直播"
                     self?.navigationController?.pushViewController(vc, animated: true)
+                } else {
+                    guard let categoryId = self?.viewModel.homeRecommendListModel?[indexPath.section].target?.categoryId else {return}
+                    if categoryId != 0 {
+                        let vc = HM_ClassifySubMenuController(categoryId:categoryId,isVipPush:false)
+                        vc.title = self?.viewModel.homeRecommendListModel?[indexPath.section].title
+                        self?.navigationController?.pushViewController(vc, animated: true)
+                    }
                 }
             }
             return headerView
@@ -273,12 +280,17 @@ extension HM_RecommendViewController:HM_RecommendHeaderCellDelegate {
 // - 点击猜你喜欢按钮进入相对应界面
 extension HM_RecommendViewController : HM_RecommendGuessLikeCellDelegate {
     func recommendGuessLikeCellItemClick(model:HM_RecommendListModel) {
-        
-    }
+        let vc = HM_PlayDetailController(albumId: model.albumId)
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("点击猜你喜欢")    }
 }
 // - 点击热门有声书按钮进入相对应界面
 extension HM_RecommendViewController : HM_RecommendHotAudioBookCellDelegate {
     func recommendHotAudioBookCellCilck(model: HM_RecommendListModel) {
-        
+        func hotAudiobookCellItemClick(model: HM_RecommendListModel) {
+            let vc = HM_PlayDetailController(albumId: model.albumId)
+            self.navigationController?.pushViewController(vc, animated: true)
+            print("点击热门有声书")
+        }
     }
 }

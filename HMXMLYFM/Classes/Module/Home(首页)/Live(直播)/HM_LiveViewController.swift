@@ -161,7 +161,9 @@ extension HM_LiveViewController: UICollectionViewDelegate, UICollectionViewDataS
 // - 点击顶部分类按钮 delegate
 extension HM_LiveViewController:HM_HomeLiveGridCellDelegate{
     func homeLiveGridCellItemClick(channelId: Int,title:String) {
-      
+        let vc = HM_LiveCategoryListController(channelId: channelId)
+        vc.title = title
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

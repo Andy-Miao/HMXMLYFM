@@ -107,37 +107,37 @@ extension HM_BroadcastViewController: UICollectionViewDelegate, UICollectionView
         }
         
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//            if indexPath.section == 1 {
-//                if indexPath.row == 7 {
-//                    if viewModel.isUnfold {
-//                        let categoryId:Int = (viewModel.categories?[indexPath.row].id)!
-//                        let title = viewModel.categories?[indexPath.row].name
-//                        let vc = HM_BroadcastListController(url: nil, categoryId: categoryId,isMoreCategory:true)
-//                        vc.title = title
-//                        self.navigationController?.pushViewController(vc, animated: true)
-//                    }else {
-//                        viewModel.isUnfold = true
-//                        viewModel.categories?.remove(at: 7)
-//                        viewModel.categories?.insert(viewModel.coverModel, at: 14)
-//                        self.collectionView.reloadData()
-//                    }
-//                }else if indexPath.row == 15{
-//                    if viewModel.isUnfold{
-//                        viewModel.isUnfold = false
-//                        viewModel.categories?.remove(at: 14)
-//                        viewModel.categories?.insert(viewModel.bottomModel, at: 7)
-//                        self.collectionView.reloadData()
-//                    }else {
-//
-//                    }
-//                }else{
-//                    let categoryId:Int = (viewModel.categories?[indexPath.row].id)!
-//                    let title = viewModel.categories?[indexPath.row].name
-//                    let vc = HM_BroadcastListController(url: nil, categoryId: categoryId,isMoreCategory:true)
-//                    vc.title = title
-//                    self.navigationController?.pushViewController(vc, animated: true)
-//                }
-//            }
+            if indexPath.section == 1 {
+                if indexPath.row == 7 {
+                    if viewModel.isUnfold {
+                        let categoryId:Int = (viewModel.categories?[indexPath.row].id)!
+                        let title = viewModel.categories?[indexPath.row].name
+                        let vc = HM_BroadcastListController(url: nil, categoryId: categoryId,isMoreCategory:true)
+                        vc.title = title
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }else {
+                        viewModel.isUnfold = true
+                        viewModel.categories?.remove(at: 7)
+                        viewModel.categories?.insert(viewModel.coverModel, at: 14)
+                        self.collectionView.reloadData()
+                    }
+                }else if indexPath.row == 15{
+                    if viewModel.isUnfold{
+                        viewModel.isUnfold = false
+                        viewModel.categories?.remove(at: 14)
+                        viewModel.categories?.insert(viewModel.bottomModel, at: 7)
+                        self.collectionView.reloadData()
+                    }else {
+
+                    }
+                }else{
+                    let categoryId:Int = (viewModel.categories?[indexPath.row].id)!
+                    let title = viewModel.categories?[indexPath.row].name
+                    let vc = HM_BroadcastListController(url: nil, categoryId: categoryId,isMoreCategory:true)
+                    vc.title = title
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
 
 
         }

@@ -176,9 +176,9 @@ extension HM_VipViewController:HM_VipBannerCellDelegate {
 extension HM_VipViewController:HM_HomeVipCategoriesCellDelegate{
     func homeVipCategoriesCellItemClick(id: String, url: String,title:String) {
         if url == ""{
-//            let vc = HM_ClassifySubMenuController(categoryId: Int(id)!,isVipPush:true)
-//            vc.title = title
-//            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = HM_ClassifySubMenuController(categoryId: Int(id)!,isVipPush:true)
+            vc.title = title
+            self.navigationController?.pushViewController(vc, animated: true)
         }else{
             let vc = HM_WebViewController(url:url)
             vc.title = title
@@ -190,13 +190,15 @@ extension HM_VipViewController:HM_HomeVipCategoriesCellDelegate{
 // - 点击热播item delegate
 extension HM_VipViewController:HM_HomeVipHotCellDelegate{
     func homeVipHotCellItemClick(model: HM_CategoryContents) {
-      
+        let vc = HM_PlayDetailController(albumId: model.albumId)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 // - 点击Vip尊享课item delegate
 extension HM_VipViewController:HM_HomeVipEnjoyCellDelegate{
     func homeVipEnjoyCellItemClick(model: HM_CategoryContents) {
-       
+        let vc = HM_PlayDetailController(albumId: model.albumId)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
