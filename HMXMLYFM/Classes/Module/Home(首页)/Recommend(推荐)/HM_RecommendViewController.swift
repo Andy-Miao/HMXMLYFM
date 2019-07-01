@@ -233,6 +233,14 @@ extension HM_RecommendViewController :  UICollectionViewDelegateFlowLayout, UICo
 extension HM_RecommendViewController:HM_RecommendHeaderCellDelegate {
     
     func recommendHeaderBannerClick(url: String) {
+        let status = MessageView.viewFromNib(layout: .statusLine)
+        status.backgroundView.backgroundColor = BTN_COLOR
+        status.bodyLabel?.textColor = .white
+        status.configureContent(body: "暂时没有点击功能")
+        var statusConfig = SwiftMessages.defaultConfig
+        statusConfig.presentationContext = .window(windowLevel: UIWindowLevelNormal)
+        statusConfig.preferredStatusBarStyle = .lightContent
+        SwiftMessages.show(config: statusConfig, view:  status)
         
     }
     
@@ -250,9 +258,9 @@ extension HM_RecommendViewController:HM_RecommendHeaderCellDelegate {
                  warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
                  SwiftMessages.show(config: warningConfig, view: warning)
             } else{
-//                let vc = HM_ClassifySubMenuController(categoryId:Int(categoryId)!)
-//                vc.title = title
-//                self.navigationController?.pushViewController(vc, animated: true)
+                let vc = HM_ClassifySubMenuController(categoryId:Int(categoryId)!)
+                vc.title = title
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         } else {
             let vc = HM_WebViewController(url:url)

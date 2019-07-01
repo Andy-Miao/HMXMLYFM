@@ -26,11 +26,11 @@ class MainTabBarController: ESTabBarController {
         self.delegate = self as? UITabBarControllerDelegate
         self.title = "Irregularity"
         self.tabBar.shadowImage = UIImage(named: "transparent")
-        self.shouldHijackHandler = {
+        self.shouldHijackHandler = { // 是否需要自定义点击事件
             tabBarController,viewController,index in
-            if index == 2 {
-                return true
-            }
+//            if index == 2 {
+//                return true
+//            }
             return false
         }
         
@@ -41,7 +41,7 @@ class MainTabBarController: ESTabBarController {
                 warning.configureDropShadow()
                 
                 let iconText = ["🤔", "😳", "🙄", "😶"].sm_random()!
-                warning.configureContent(title: "Warning", body: "暂是没有此功能", iconText: iconText)
+                warning.configureContent(title: "Warning", body: "暂时没有此功能", iconText: iconText)
                 warning.button?.isHidden = true
                 var warningConfig = SwiftMessages.defaultConfig
                 warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
