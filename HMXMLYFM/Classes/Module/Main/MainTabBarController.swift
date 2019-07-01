@@ -28,9 +28,9 @@ class MainTabBarController: ESTabBarController {
         self.tabBar.shadowImage = UIImage(named: "transparent")
         self.shouldHijackHandler = { // 是否需要自定义点击事件
             tabBarController,viewController,index in
-//            if index == 2 {
-//                return true
-//            }
+            if index == 2 {
+                return true
+            }
             return false
         }
         
